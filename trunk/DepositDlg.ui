@@ -1,0 +1,308 @@
+<ui version="4.0" >
+ <class>DepositDlgClass</class>
+ <widget class="QDialog" name="DepositDlgClass" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>277</width>
+    <height>261</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>DepositDlg</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" >
+   <item row="0" column="0" >
+    <widget class="QLabel" name="label_7" >
+     <property name="text" >
+      <string>金额</string>
+     </property>
+     <property name="alignment" >
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1" colspan="2" >
+    <widget class="QDoubleSpinBox" name="dSpinBoxAmount" >
+     <property name="buttonSymbols" >
+      <enum>QAbstractSpinBox::NoButtons</enum>
+     </property>
+     <property name="decimals" >
+      <number>1</number>
+     </property>
+     <property name="maximum" >
+      <double>100000.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" >
+    <widget class="QLabel" name="label" >
+     <property name="text" >
+      <string>银行</string>
+     </property>
+     <property name="alignment" >
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" >
+    <widget class="QComboBox" name="comboBoxBank" />
+   </item>
+   <item row="1" column="2" >
+    <widget class="QPushButton" name="buttonBank" >
+     <property name="text" >
+      <string>编辑</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" >
+    <widget class="QLabel" name="label_2" >
+     <property name="text" >
+      <string>存入时间</string>
+     </property>
+     <property name="alignment" >
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1" colspan="2" >
+    <widget class="QDateEdit" name="dateEditStart" >
+     <property name="calendarPopup" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" >
+    <widget class="QLabel" name="label_3" >
+     <property name="text" >
+      <string>存期</string>
+     </property>
+     <property name="alignment" >
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1" colspan="2" >
+    <widget class="QComboBox" name="comboBoxPeriod" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text" >
+       <string>3个月</string>
+      </property>
+     </item>
+     <item>
+      <property name="text" >
+       <string>半年</string>
+      </property>
+     </item>
+     <item>
+      <property name="text" >
+       <string>1年</string>
+      </property>
+     </item>
+     <item>
+      <property name="text" >
+       <string>2年</string>
+      </property>
+     </item>
+     <item>
+      <property name="text" >
+       <string>3年</string>
+      </property>
+     </item>
+     <item>
+      <property name="text" >
+       <string>5年</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="4" column="0" >
+    <widget class="QLabel" name="label_4" >
+     <property name="text" >
+      <string>到期时间</string>
+     </property>
+     <property name="alignment" >
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1" colspan="2" >
+    <widget class="QDateEdit" name="dateEditEnd" >
+     <property name="readOnly" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" >
+    <widget class="QLabel" name="label_5" >
+     <property name="text" >
+      <string>利率</string>
+     </property>
+     <property name="alignment" >
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1" >
+    <widget class="QDoubleSpinBox" name="dSpinBoxRate" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="buttonSymbols" >
+      <enum>QAbstractSpinBox::NoButtons</enum>
+     </property>
+     <property name="suffix" >
+      <string>%</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2" >
+    <widget class="QPushButton" name="buttonRate" >
+     <property name="text" >
+      <string>利率表</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" >
+    <widget class="QLabel" name="label_6" >
+     <property name="text" >
+      <string>利息</string>
+     </property>
+     <property name="alignment" >
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1" colspan="2" >
+    <layout class="QHBoxLayout" name="horizontalLayout" >
+     <item>
+      <widget class="QDoubleSpinBox" name="dSpinBoxInterests" >
+       <property name="sizePolicy" >
+        <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="readOnly" >
+        <bool>true</bool>
+       </property>
+       <property name="buttonSymbols" >
+        <enum>QAbstractSpinBox::NoButtons</enum>
+       </property>
+       <property name="suffix" >
+        <string> 税前</string>
+       </property>
+       <property name="maximum" >
+        <double>999999.989999999990687</double>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="dSpinBoxInterestsReal" >
+       <property name="sizePolicy" >
+        <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="readOnly" >
+        <bool>true</bool>
+       </property>
+       <property name="buttonSymbols" >
+        <enum>QAbstractSpinBox::NoButtons</enum>
+       </property>
+       <property name="suffix" >
+        <string>  税后</string>
+       </property>
+       <property name="maximum" >
+        <double>999999.989999999990687</double>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="7" column="0" colspan="3" >
+    <widget class="QCheckBox" name="checkBoxReDeposit" >
+     <property name="layoutDirection" >
+      <enum>Qt::RightToLeft</enum>
+     </property>
+     <property name="text" >
+      <string>自动转存</string>
+     </property>
+     <property name="checked" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0" colspan="3" >
+    <widget class="QDialogButtonBox" name="buttonBox" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons" >
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>dSpinBoxAmount</tabstop>
+  <tabstop>comboBoxBank</tabstop>
+  <tabstop>dateEditStart</tabstop>
+  <tabstop>comboBoxPeriod</tabstop>
+  <tabstop>dateEditEnd</tabstop>
+  <tabstop>dSpinBoxRate</tabstop>
+  <tabstop>dSpinBoxInterests</tabstop>
+  <tabstop>dSpinBoxInterestsReal</tabstop>
+  <tabstop>checkBoxReDeposit</tabstop>
+  <tabstop>buttonBank</tabstop>
+  <tabstop>buttonRate</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>DepositDlgClass</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>DepositDlgClass</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,26 @@
+<RCC>
+  <qresource prefix="/">
+    <file>Images/webdev_money.png</file>
+    <file>Images/find.png</file>
+    <file>Images/exit.png</file>
+    <file>Images/help.png</file>
+    <file>Images/ni_png_2_1876.png</file>
+    <file>Images/Floppy.png</file>
+    <file>Images/Money3.png</file>
+    <file>Images/Notepad2.png</file>
+    <file>Images/Options.png</file>
+    <file>Images/PieChart.png</file>
+    <file>Images/PieChart3.png</file>
+    <file>Images/Search_02.png</file>
+    <file>Images/Shopping.png</file>
+    <file>Images/Sun.png</file>
+    <file>Images/add_user.png</file>
+    <file>Images/apply.png</file>
+    <file>Images/calc1.png</file>
+    <file>Images/edit_add.png</file>
+    <file>Images/edit_remove.png</file>
+    <file>Images/editdelete.png</file>
+    <file>Images/kchart.png</file>
+    <file>Images/moon.png</file>
+  </qresource>
+</RCC>

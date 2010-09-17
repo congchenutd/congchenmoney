@@ -1,0 +1,78 @@
+<ui version="4.0" >
+ <class>ProgressWidgetClass</class>
+ <widget class="QWidget" name="ProgressWidgetClass" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>ProgressWidget</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <property name="margin" >
+    <number>0</number>
+   </property>
+   <property name="spacing" >
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QTabWidget" name="tabWidget" >
+     <property name="currentIndex" >
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="barViewTab" >
+      <attribute name="title" >
+       <string>柱形图</string>
+      </attribute>
+      <layout class="QVBoxLayout" >
+       <property name="margin" >
+        <number>0</number>
+       </property>
+       <property name="spacing" >
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="BarView" name="barView" />
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="kViewTab" >
+      <attribute name="title" >
+       <string>线形图</string>
+      </attribute>
+      <layout class="QVBoxLayout" >
+       <property name="margin" >
+        <number>0</number>
+       </property>
+       <property name="spacing" >
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="KView" name="kView" />
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11" />
+ <customwidgets>
+  <customwidget>
+   <class>KView</class>
+   <extends>QTableView</extends>
+   <header>KView.h</header>
+  </customwidget>
+  <customwidget>
+   <class>BarView</class>
+   <extends>QTableView</extends>
+   <header>BarView.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

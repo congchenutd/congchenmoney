@@ -1,0 +1,190 @@
+<ui version="4.0" >
+ <class>ComparePageClass</class>
+ <widget class="QWidget" name="ComparePageClass" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>624</width>
+    <height>411</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>ComparePage</string>
+  </property>
+  <layout class="QGridLayout" >
+   <property name="margin" >
+    <number>0</number>
+   </property>
+   <property name="spacing" >
+    <number>6</number>
+   </property>
+   <item row="0" column="9" >
+    <widget class="QPushButton" name="buttonNextYear" >
+     <property name="enabled" >
+      <bool>false</bool>
+     </property>
+     <property name="maximumSize" >
+      <size>
+       <width>50</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text" >
+      <string>>></string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="8" >
+    <widget class="QPushButton" name="buttonByYear" >
+     <property name="minimumSize" >
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="icon" >
+      <iconset resource="Money.qrc" >
+       <normaloff>:/Images/Sun.png</normaloff>:/Images/Sun.png</iconset>
+     </property>
+     <property name="checkable" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="7" >
+    <widget class="QPushButton" name="buttonPrevYear" >
+     <property name="enabled" >
+      <bool>false</bool>
+     </property>
+     <property name="maximumSize" >
+      <size>
+       <width>50</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text" >
+      <string>&lt;&lt;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="6" >
+    <widget class="QPushButton" name="buttonNextMonth" >
+     <property name="maximumSize" >
+      <size>
+       <width>50</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text" >
+      <string>></string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="5" >
+    <widget class="QPushButton" name="buttonByMonth" >
+     <property name="minimumSize" >
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="icon" >
+      <iconset resource="Money.qrc" >
+       <normaloff>:/Images/moon.png</normaloff>:/Images/moon.png</iconset>
+     </property>
+     <property name="checkable" >
+      <bool>true</bool>
+     </property>
+     <property name="checked" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="4" >
+    <widget class="QPushButton" name="buttonPrevMonth" >
+     <property name="maximumSize" >
+      <size>
+       <width>50</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text" >
+      <string>&lt;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3" >
+    <widget class="QDateEdit" name="dateEditEnd" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="currentSection" >
+      <enum>QDateTimeEdit::DaySection</enum>
+     </property>
+     <property name="calendarPopup" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2" >
+    <widget class="QLabel" name="label_8" >
+     <property name="text" >
+      <string>到</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1" >
+    <widget class="QDateEdit" name="dateEditStart" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="currentSection" >
+      <enum>QDateTimeEdit::DaySection</enum>
+     </property>
+     <property name="calendarPopup" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" >
+    <widget class="QLabel" name="label_7" >
+     <property name="text" >
+      <string>从</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="10" >
+    <widget class="QSplitter" name="splitter" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QTableView" name="tableView" >
+      <property name="editTriggers" >
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+     </widget>
+     <widget class="BarView" native="1" name="barView" />
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11" />
+ <customwidgets>
+  <customwidget>
+   <class>BarView</class>
+   <extends>QWidget</extends>
+   <header>BarView.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="Money.qrc" />
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowClass</class>
+ <widget class="QMainWindow" name="MainWindowClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>718</width>
+    <height>549</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>640</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>My Money</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Money.qrc">
+    <normaloff>:/Images/webdev_money.png</normaloff>:/Images/webdev_money.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="handleWidth">
+       <number>10</number>
+      </property>
+      <widget class="QListWidget" name="listWidget">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>华文黑体</family>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
+        </size>
+       </property>
+       <property name="gridSize">
+        <size>
+         <width>100</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="viewMode">
+        <enum>QListView::IconMode</enum>
+       </property>
+       <item>
+        <property name="text">
+         <string>支出记账</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Money.qrc">
+          <normaloff>:/Images/Shopping.png</normaloff>:/Images/Shopping.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>支出统计</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Money.qrc">
+          <normaloff>:/Images/PieChart3.png</normaloff>:/Images/PieChart3.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>收入记账</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Money.qrc">
+          <normaloff>:/Images/Money3.png</normaloff>:/Images/Money3.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>收入统计</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Money.qrc">
+          <normaloff>:/Images/PieChart.png</normaloff>:/Images/PieChart.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>收支对比</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Money.qrc">
+          <normaloff>:/Images/kchart.png</normaloff>:/Images/kchart.png</iconset>
+        </property>
+       </item>
+      </widget>
+      <widget class="QStackedWidget" name="stackedWidget">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="currentIndex">
+        <number>-1</number>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>718</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_About">
+    <property name="title">
+     <string>关于</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;文件</string>
+    </property>
+    <addaction name="actionDeposits"/>
+    <addaction name="actionBackup"/>
+    <addaction name="actionSetting"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_About"/>
+  </widget>
+  <action name="actionQuit">
+   <property name="icon">
+    <iconset resource="Money.qrc">
+     <normaloff>:/Images/exit.png</normaloff>:/Images/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="Money.qrc">
+     <normaloff>:/Images/help.png</normaloff>:/Images/help.png</iconset>
+   </property>
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+  <action name="actionSetting">
+   <property name="icon">
+    <iconset resource="Money.qrc">
+     <normaloff>:/Images/Options.png</normaloff>:/Images/Options.png</iconset>
+   </property>
+   <property name="text">
+    <string>设置</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionBackup">
+   <property name="icon">
+    <iconset resource="Money.qrc">
+     <normaloff>:/Images/Floppy.png</normaloff>:/Images/Floppy.png</iconset>
+   </property>
+   <property name="text">
+    <string>备份数据库</string>
+   </property>
+  </action>
+  <action name="actionDeposits">
+   <property name="icon">
+    <iconset resource="Money.qrc">
+     <normaloff>:/Images/ni_png_2_1876.png</normaloff>:/Images/ni_png_2_1876.png</iconset>
+   </property>
+   <property name="text">
+    <string>存单管理</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="Money.qrc"/>
+ </resources>
+ <connections/>
+</ui>

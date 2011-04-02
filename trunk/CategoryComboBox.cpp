@@ -23,7 +23,7 @@ void CategoryComboBox::setTable(const QString& table)
 		else
 			addItem(cateName);
 	}
-	sort();
+//	sort();
 	insertItem(0, tr("Œ¥∑÷¿‡"));
 
 	// set color

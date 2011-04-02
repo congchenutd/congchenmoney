@@ -7,7 +7,7 @@ TARGET =
 DEPENDPATH += . debug
 INCLUDEPATH += .
 
-QT += sql
+QT += sql network
 RC_FILE = Money.rc
 
 # Input

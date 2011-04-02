@@ -1,15 +1,15 @@
 #ifndef CATEGORYCOMBOBOX_H
 #define CATEGORYCOMBOBOX_H
 
-#include "../MyComboBox/MyComboBox.h"
+#include "../MyComboBox/SetTextComboBox.h"
 #include <QComboBox>
 
-class CategoryComboBox : public MyComboBox
+class CategoryComboBox : public SetTextComboBox
 {
 	Q_OBJECT
 
 public:
-	CategoryComboBox(QWidget *parent=0) : MyComboBox(parent), maintypeOnly(true) {}
+	CategoryComboBox(QWidget *parent=0) : SetTextComboBox(parent), maintypeOnly(true) {}
 
 	int  getCategory() const;
 	void setTable   (const QString& table);

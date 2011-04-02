@@ -3,7 +3,7 @@
 	ProjectType="Visual C++"
 	Version="9.00"
 	Name="Money"
-	ProjectGUID="{5A9F66FA-0AF1-34A7-B77B-9093893B38E6}"
+	ProjectGUID="{A1238452-94CA-3ACF-81D1-7D1A8F3D2C39}"
 	Keyword="Qt4VSv1.0"
 	TargetFrameworkVersion="0"
 	>
@@ -43,10 +43,10 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalOptions="-Zm200 -w34100 -w34189 -w34100 -w34189"
+				AdditionalOptions="-Zm200 -w34100 -w34189"
 				Optimization="4"
-				AdditionalIncludeDirectories="&quot;c:\Qt\4.6.3\include\QtCore&quot;,&quot;c:\Qt\4.6.3\include\QtGui&quot;,&quot;c:\Qt\4.6.3\include\QtSql&quot;,&quot;c:\Qt\4.6.3\include&quot;,&quot;.&quot;,&quot;c:\Qt\4.6.3\include\ActiveQt&quot;,&quot;debug&quot;,&quot;.&quot;,c:\Qt\4.6.3\mkspecs\win32-msvc2008"
-				PreprocessorDefinitions="_WINDOWS,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_DLL,QT_SQL_LIB,QT_GUI_LIB,QT_CORE_LIB,QT_THREAD_SUPPORT"
+				AdditionalIncludeDirectories="&quot;$(QTDIR)\include\QtCore&quot;,&quot;$(QTDIR)\include\QtNetwork&quot;,&quot;$(QTDIR)\include\QtGui&quot;,&quot;$(QTDIR)\include\QtSql&quot;,&quot;$(QTDIR)\include&quot;,&quot;.&quot;,&quot;$(QTDIR)\include\ActiveQt&quot;,&quot;debug&quot;,&quot;.&quot;,d:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008"
+				PreprocessorDefinitions="_WINDOWS,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_DLL,QT_SQL_LIB,QT_GUI_LIB,QT_NETWORK_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT"
 				GeneratePreprocessedFile="0"
 				ExceptionHandling="1"
 				RuntimeLibrary="3"
@@ -65,7 +65,7 @@
 			/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="_WINDOWS,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_DLL,QT_SQL_LIB,QT_GUI_LIB,QT_CORE_LIB,QT_THREAD_SUPPORT,_DEBUG"
+				PreprocessorDefinitions="_WINDOWS,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_DLL,QT_SQL_LIB,QT_GUI_LIB,QT_NETWORK_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT,_DEBUG"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -73,11 +73,11 @@
 			<Tool
 				Name="VCLinkerTool"
 				IgnoreImportLibrary="true"
-				AdditionalOptions="&quot;/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot; &quot;/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot;"
-				AdditionalDependencies="c:\Qt\4.6.3\lib\qtmaind.lib c:\Qt\4.6.3\lib\QtSqld4.lib c:\Qt\4.6.3\lib\QtGuid4.lib c:\Qt\4.6.3\lib\QtCored4.lib"
+				AdditionalOptions="&quot;/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot;"
+				AdditionalDependencies="qtmaind.lib QtSqld4.lib QtGuid4.lib QtNetworkd4.lib QtCored4.lib"
 				OutputFile="debug\Money.exe"
 				SuppressStartupBanner="true"
-				AdditionalLibraryDirectories="c:\Qt\4.6.3\lib"
+				AdditionalLibraryDirectories="$(QTDIR)\lib"
 				GenerateDebugInformation="true"
 				ProgramDatabaseFile=""
 				SubSystem="2"
@@ -133,10 +133,10 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalOptions="-Zm200 -w34100 -w34189 -w34100 -w34189"
+				AdditionalOptions="-Zm200 -w34100 -w34189"
 				Optimization="2"
-				AdditionalIncludeDirectories="&quot;c:\Qt\4.6.3\include\QtCore&quot;,&quot;c:\Qt\4.6.3\include\QtGui&quot;,&quot;c:\Qt\4.6.3\include\QtSql&quot;,&quot;c:\Qt\4.6.3\include&quot;,&quot;.&quot;,&quot;c:\Qt\4.6.3\include\ActiveQt&quot;,&quot;release&quot;,&quot;.&quot;,c:\Qt\4.6.3\mkspecs\win32-msvc2008"
-				PreprocessorDefinitions="QT_NO_DEBUG,NDEBUG,_WINDOWS,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_DLL,QT_NO_DEBUG,QT_SQL_LIB,QT_GUI_LIB,QT_CORE_LIB,QT_THREAD_SUPPORT,NDEBUG"
+				AdditionalIncludeDirectories="&quot;$(QTDIR)\include\QtCore&quot;,&quot;$(QTDIR)\include\QtNetwork&quot;,&quot;$(QTDIR)\include\QtGui&quot;,&quot;$(QTDIR)\include\QtSql&quot;,&quot;$(QTDIR)\include&quot;,&quot;.&quot;,&quot;$(QTDIR)\include\ActiveQt&quot;,&quot;release&quot;,&quot;.&quot;,d:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008"
+				PreprocessorDefinitions="QT_NO_DEBUG,NDEBUG,_WINDOWS,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_DLL,QT_NO_DEBUG,QT_SQL_LIB,QT_GUI_LIB,QT_NETWORK_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT,NDEBUG"
 				GeneratePreprocessedFile="0"
 				ExceptionHandling="1"
 				RuntimeLibrary="2"
@@ -155,7 +155,7 @@
 			/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="QT_NO_DEBUG,NDEBUG,_WINDOWS,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_DLL,QT_NO_DEBUG,QT_SQL_LIB,QT_GUI_LIB,QT_CORE_LIB,QT_THREAD_SUPPORT"
+				PreprocessorDefinitions="QT_NO_DEBUG,NDEBUG,_WINDOWS,UNICODE,WIN32,QT_LARGEFILE_SUPPORT,QT_DLL,QT_NO_DEBUG,QT_SQL_LIB,QT_GUI_LIB,QT_NETWORK_LIB,QT_CORE_LIB,QT_HAVE_MMX,QT_HAVE_3DNOW,QT_HAVE_SSE,QT_HAVE_MMXEXT,QT_HAVE_SSE2,QT_THREAD_SUPPORT"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -163,12 +163,12 @@
 			<Tool
 				Name="VCLinkerTool"
 				IgnoreImportLibrary="true"
-				AdditionalOptions="&quot;/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot; &quot;/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot;"
-				AdditionalDependencies="c:\Qt\4.6.3\lib\qtmain.lib c:\Qt\4.6.3\lib\QtSql4.lib c:\Qt\4.6.3\lib\QtGui4.lib c:\Qt\4.6.3\lib\QtCore4.lib"
+				AdditionalOptions="&quot;/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot;"
+				AdditionalDependencies="qtmain.lib QtSql4.lib QtGui4.lib QtNetwork4.lib QtCore4.lib"
 				OutputFile="release\Money.exe"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
-				AdditionalLibraryDirectories="c:\Qt\4.6.3\lib"
+				AdditionalLibraryDirectories="$(QTDIR)\lib"
 				GenerateDebugInformation="false"
 				ProgramDatabaseFile=""
 				SubSystem="2"
@@ -294,10 +294,6 @@
 				>
 			</File>
 			<File
-				RelativePath="..\MyComboBox\MyComboBox.cpp"
-				>
-			</File>
-			<File
 				RelativePath="MyHeaderView.cpp"
 				>
 			</File>
@@ -334,6 +330,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\MyComboBox\SetTextComboBox.cpp"
+				>
+			</File>
+			<File
 				RelativePath="SettingDlg.cpp"
 				>
 			</File>
@@ -351,10 +351,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC AutoDialog.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_AutoDialog.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 AutoDialog.h -o debug\moc_AutoDialog.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="AutoDialog.h;Rem"
-						Outputs="debug\moc_AutoDialog.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -362,10 +362,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC AutoDialog.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_AutoDialog.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 AutoDialog.h -o release\moc_AutoDialog.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="AutoDialog.h;Rem"
-						Outputs="release\moc_AutoDialog.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
@@ -377,10 +377,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC AutoListDialog.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_AutoListDialog.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 AutoListDialog.h -o debug\moc_AutoListDialog.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="AutoListDialog.h;Rem"
-						Outputs="debug\moc_AutoListDialog.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -388,10 +388,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC AutoListDialog.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_AutoListDialog.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 AutoListDialog.h -o release\moc_AutoListDialog.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="AutoListDialog.h;Rem"
-						Outputs="release\moc_AutoListDialog.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
@@ -403,10 +403,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC BankDlg.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_BankDlg.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 BankDlg.h -o debug\moc_BankDlg.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="BankDlg.h;Rem"
-						Outputs="debug\moc_BankDlg.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -414,16 +414,38 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC BankDlg.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_BankDlg.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 BankDlg.h -o release\moc_BankDlg.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="BankDlg.h;Rem"
-						Outputs="release\moc_BankDlg.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="BarView.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="CategoryComboBox.h"
@@ -433,10 +455,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC CategoryComboBox.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_CategoryComboBox.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 CategoryComboBox.h -o debug\moc_CategoryComboBox.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="CategoryComboBox.h;Rem"
-						Outputs="debug\moc_CategoryComboBox.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -444,10 +466,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC CategoryComboBox.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_CategoryComboBox.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 CategoryComboBox.h -o release\moc_CategoryComboBox.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="CategoryComboBox.h;Rem"
-						Outputs="release\moc_CategoryComboBox.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
@@ -459,10 +481,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC CategoryEditDialog.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_CategoryEditDialog.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 CategoryEditDialog.h -o debug\moc_CategoryEditDialog.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="CategoryEditDialog.h;Rem"
-						Outputs="debug\moc_CategoryEditDialog.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -470,10 +492,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC CategoryEditDialog.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_CategoryEditDialog.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 CategoryEditDialog.h -o release\moc_CategoryEditDialog.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="CategoryEditDialog.h;Rem"
-						Outputs="release\moc_CategoryEditDialog.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
@@ -485,10 +507,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC CategoryListDialog.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_CategoryListDialog.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 CategoryListDialog.h -o debug\moc_CategoryListDialog.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="CategoryListDialog.h;Rem"
-						Outputs="debug\moc_CategoryListDialog.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -496,10 +518,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC CategoryListDialog.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_CategoryListDialog.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 CategoryListDialog.h -o release\moc_CategoryListDialog.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="CategoryListDialog.h;Rem"
-						Outputs="release\moc_CategoryListDialog.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
@@ -511,10 +533,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC CategoryModel.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_CategoryModel.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 CategoryModel.h -o debug\moc_CategoryModel.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="CategoryModel.h;Rem"
-						Outputs="debug\moc_CategoryModel.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -522,10 +544,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC CategoryModel.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_CategoryModel.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 CategoryModel.h -o release\moc_CategoryModel.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="CategoryModel.h;Rem"
-						Outputs="release\moc_CategoryModel.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
@@ -537,10 +559,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC ComparePage.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_ComparePage.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ComparePage.h -o debug\moc_ComparePage.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="ComparePage.h;Rem"
-						Outputs="debug\moc_ComparePage.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -548,16 +570,38 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC ComparePage.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_ComparePage.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ComparePage.h -o release\moc_ComparePage.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="ComparePage.h;Rem"
-						Outputs="release\moc_ComparePage.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="Connection.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="DailyDialog.h"
@@ -567,10 +611,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC DailyDialog.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_DailyDialog.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 DailyDialog.h -o debug\moc_DailyDialog.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="DailyDialog.h;Rem"
-						Outputs="debug\moc_DailyDialog.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -578,10 +622,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC DailyDialog.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_DailyDialog.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 DailyDialog.h -o release\moc_DailyDialog.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="DailyDialog.h;Rem"
-						Outputs="release\moc_DailyDialog.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
@@ -593,10 +637,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC DailyModel.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_DailyModel.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 DailyModel.h -o debug\moc_DailyModel.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="DailyModel.h;Rem"
-						Outputs="debug\moc_DailyModel.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -604,10 +648,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC DailyModel.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_DailyModel.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 DailyModel.h -o release\moc_DailyModel.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="DailyModel.h;Rem"
-						Outputs="release\moc_DailyModel.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
@@ -619,10 +663,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC DailyPage.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_DailyPage.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 DailyPage.h -o debug\moc_DailyPage.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="DailyPage.h;Rem"
-						Outputs="debug\moc_DailyPage.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -630,10 +674,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC DailyPage.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_DailyPage.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 DailyPage.h -o release\moc_DailyPage.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="DailyPage.h;Rem"
-						Outputs="release\moc_DailyPage.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
@@ -645,10 +689,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC DepositDlg.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_DepositDlg.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 DepositDlg.h -o debug\moc_DepositDlg.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="DepositDlg.h;Rem"
-						Outputs="debug\moc_DepositDlg.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -656,10 +700,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC DepositDlg.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_DepositDlg.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 DepositDlg.h -o release\moc_DepositDlg.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="DepositDlg.h;Rem"
-						Outputs="release\moc_DepositDlg.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
@@ -671,10 +715,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC DepositPage.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_DepositPage.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 DepositPage.h -o debug\moc_DepositPage.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="DepositPage.h;Rem"
-						Outputs="debug\moc_DepositPage.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -682,10 +726,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC DepositPage.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_DepositPage.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 DepositPage.h -o release\moc_DepositPage.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="DepositPage.h;Rem"
-						Outputs="release\moc_DepositPage.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
@@ -697,10 +741,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC DetailWindow.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_DetailWindow.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 DetailWindow.h -o debug\moc_DetailWindow.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="DetailWindow.h;Rem"
-						Outputs="debug\moc_DetailWindow.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -708,10 +752,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC DetailWindow.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_DetailWindow.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 DetailWindow.h -o release\moc_DetailWindow.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="DetailWindow.h;Rem"
-						Outputs="release\moc_DetailWindow.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
@@ -727,10 +771,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC GridWidget.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_GridWidget.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 GridWidget.h -o debug\moc_GridWidget.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="GridWidget.h;Rem"
-						Outputs="debug\moc_GridWidget.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -738,10 +782,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC GridWidget.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_GridWidget.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 GridWidget.h -o release\moc_GridWidget.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="GridWidget.h;Rem"
-						Outputs="release\moc_GridWidget.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
@@ -753,10 +797,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC HistoryPage.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_HistoryPage.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 HistoryPage.h -o debug\moc_HistoryPage.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="HistoryPage.h;Rem"
-						Outputs="debug\moc_HistoryPage.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -764,20 +808,64 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC HistoryPage.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_HistoryPage.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 HistoryPage.h -o release\moc_HistoryPage.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="HistoryPage.h;Rem"
-						Outputs="release\moc_HistoryPage.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="InterestRateDlg.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="KView.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="MainWindow.h"
@@ -787,10 +875,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC MainWindow.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_MainWindow.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 MainWindow.h -o debug\moc_MainWindow.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="MainWindow.h;Rem"
-						Outputs="debug\moc_MainWindow.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -798,16 +886,12 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC MainWindow.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_MainWindow.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 MainWindow.h -o release\moc_MainWindow.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="MainWindow.h;Rem"
-						Outputs="release\moc_MainWindow.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="..\MyComboBox\MyComboBox.h"
-				>
 			</File>
 			<File
 				RelativePath="MyHeaderView.h"
@@ -817,10 +901,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC MyHeaderView.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_MyHeaderView.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 MyHeaderView.h -o debug\moc_MyHeaderView.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="MyHeaderView.h;Rem"
-						Outputs="debug\moc_MyHeaderView.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -828,20 +912,64 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC MyHeaderView.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_MyHeaderView.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 MyHeaderView.h -o release\moc_MyHeaderView.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="MyHeaderView.h;Rem"
-						Outputs="release\moc_MyHeaderView.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="..\MySetting\MySetting.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="MyTableView.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="MyThread.h"
@@ -851,10 +979,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC MyThread.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_MyThread.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 MyThread.h -o debug\moc_MyThread.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="MyThread.h;Rem"
-						Outputs="debug\moc_MyThread.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I.&quot; &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -862,10 +990,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC MyThread.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_MyThread.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 MyThread.h -o release\moc_MyThread.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="MyThread.h;Rem"
-						Outputs="release\moc_MyThread.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I.&quot; &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
@@ -877,10 +1005,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC PasswordDlg.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_PasswordDlg.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 PasswordDlg.h -o debug\moc_PasswordDlg.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="PasswordDlg.h;Rem"
-						Outputs="debug\moc_PasswordDlg.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -888,10 +1016,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC PasswordDlg.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_PasswordDlg.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 PasswordDlg.h -o release\moc_PasswordDlg.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="PasswordDlg.h;Rem"
-						Outputs="release\moc_PasswordDlg.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
@@ -903,10 +1031,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC PieModel.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_PieModel.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 PieModel.h -o debug\moc_PieModel.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="PieModel.h;Rem"
-						Outputs="debug\moc_PieModel.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -914,10 +1042,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC PieModel.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_PieModel.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 PieModel.h -o release\moc_PieModel.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="PieModel.h;Rem"
-						Outputs="release\moc_PieModel.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
@@ -929,10 +1057,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC PieView.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_PieView.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 PieView.h -o debug\moc_PieView.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="PieView.h;Rem"
-						Outputs="debug\moc_PieView.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -940,10 +1068,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC PieView.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_PieView.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 PieView.h -o release\moc_PieView.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="PieView.h;Rem"
-						Outputs="release\moc_PieView.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
@@ -955,10 +1083,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC PieWidget.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_PieWidget.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 PieWidget.h -o debug\moc_PieWidget.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="PieWidget.h;Rem"
-						Outputs="debug\moc_PieWidget.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -966,10 +1094,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC PieWidget.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_PieWidget.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 PieWidget.h -o release\moc_PieWidget.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="PieWidget.h;Rem"
-						Outputs="release\moc_PieWidget.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
@@ -981,10 +1109,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC ProgressChartView.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_ProgressChartView.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ProgressChartView.h -o debug\moc_ProgressChartView.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="ProgressChartView.h;Rem"
-						Outputs="debug\moc_ProgressChartView.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -992,10 +1120,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC ProgressChartView.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_ProgressChartView.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ProgressChartView.h -o release\moc_ProgressChartView.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="ProgressChartView.h;Rem"
-						Outputs="release\moc_ProgressChartView.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
@@ -1007,10 +1135,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC ProgressWidget.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_ProgressWidget.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ProgressWidget.h -o debug\moc_ProgressWidget.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="ProgressWidget.h;Rem"
-						Outputs="debug\moc_ProgressWidget.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -1018,10 +1146,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC ProgressWidget.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_ProgressWidget.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 ProgressWidget.h -o release\moc_ProgressWidget.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="ProgressWidget.h;Rem"
-						Outputs="release\moc_ProgressWidget.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
@@ -1033,10 +1161,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC qtcolorcombobox.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_qtcolorcombobox.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 qtcolorcombobox.h -o debug\moc_qtcolorcombobox.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="Rem;qtcolorcombobox.h"
-						Outputs="debug\moc_qtcolorcombobox.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -1044,15 +1172,41 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC qtcolorcombobox.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_qtcolorcombobox.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 qtcolorcombobox.h -o release\moc_qtcolorcombobox.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="Rem;qtcolorcombobox.h"
-						Outputs="release\moc_qtcolorcombobox.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="Resource.h"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\MyComboBox\SetTextComboBox.h"
 				>
 			</File>
 			<File
@@ -1063,10 +1217,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC SettingDlg.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile debug\moc_SettingDlg.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;debug&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 SettingDlg.h -o debug\moc_SettingDlg.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="Rem;SettingDlg.h"
-						Outputs="debug\moc_SettingDlg.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\debug&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -1074,10 +1228,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="MOC SettingDlg.h"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile release\moc_SettingDlg.cpp&#x0D;&#x0A;C:\Qt\4.6.3\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I&quot;c:\Qt\4.6.3\include\QtCore&quot; -I&quot;c:\Qt\4.6.3\include\QtGui&quot; -I&quot;c:\Qt\4.6.3\include\QtSql&quot; -I&quot;c:\Qt\4.6.3\include&quot; -I&quot;.&quot; -I&quot;c:\Qt\4.6.3\include\ActiveQt&quot; -I&quot;release&quot; -I&quot;.&quot; -Ic:\Qt\4.6.3\mkspecs\win32-msvc2008 -D_MSC_VER=1500 -DWIN32 SettingDlg.h -o release\moc_SettingDlg.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="Rem;SettingDlg.h"
-						Outputs="release\moc_SettingDlg.cpp"
+						Description="Moc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\moc.exe&quot;  &quot;$(InputPath)&quot; -o &quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;  -DQT_NO_DEBUG -DNDEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT &quot;-I$(QTDIR)\include\QtCore&quot; &quot;-I$(QTDIR)\include\QtNetwork&quot; &quot;-I$(QTDIR)\include\QtGui&quot; &quot;-I$(QTDIR)\include\QtSql&quot; &quot;-I$(QTDIR)\include&quot; &quot;-I.&quot; &quot;-I$(QTDIR)\include\ActiveQt&quot; &quot;-I.\release&quot; &quot;-I.&quot; &quot;-Id:\Program\Develop\Qt4.7.2\mkspecs\win32-msvc2008&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;$(QTDIR)\bin\moc.exe&quot;;$(InputPath)"
+						Outputs="&quot;$(ConfigurationName)\moc_$(InputName).cpp&quot;"
 					/>
 				</FileConfiguration>
 			</File>
@@ -1088,777 +1242,1179 @@
 			UniqueIdentifier="{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}"
 			>
 			<File
-				RelativePath="debug\moc_AutoDialog.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_AutoDialog.cpp"
+				RelativePath=".\GeneratedFiles\qrc_Money.cpp"
 				>
 				<FileConfiguration
 					Name="Debug|Win32"
-					ExcludedFromBuild="true"
 					>
 					<Tool
 						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="0"
 					/>
 				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_AutoListDialog.cpp"
-				>
 				<FileConfiguration
 					Name="Release|Win32"
-					ExcludedFromBuild="true"
 					>
 					<Tool
 						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_AutoListDialog.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_BankDlg.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_BankDlg.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_CategoryComboBox.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_CategoryComboBox.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_CategoryEditDialog.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_CategoryEditDialog.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_CategoryListDialog.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_CategoryListDialog.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_CategoryModel.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_CategoryModel.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_ComparePage.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_ComparePage.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_DailyDialog.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_DailyDialog.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_DailyModel.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_DailyModel.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_DailyPage.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_DailyPage.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_DepositDlg.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_DepositDlg.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_DepositPage.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_DepositPage.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_DetailWindow.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_DetailWindow.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_GridWidget.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_GridWidget.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_HistoryPage.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_HistoryPage.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_MainWindow.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_MainWindow.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_MyHeaderView.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_MyHeaderView.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_MyThread.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_MyThread.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_PasswordDlg.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_PasswordDlg.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_PieModel.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_PieModel.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_PieView.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_PieView.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_PieWidget.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_PieWidget.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_ProgressChartView.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_ProgressChartView.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_ProgressWidget.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_ProgressWidget.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_qtcolorcombobox.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_qtcolorcombobox.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\moc_SettingDlg.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\moc_SettingDlg.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\Money.res"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\Money.res"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="release\qrc_Money.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="debug\qrc_Money.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="0"
 					/>
 				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="ui_AutoDialog.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="ui_AutoListDialog.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="ui_BankDlg.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="ui_CategoryEditDialog.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="ui_CategoryListDialog.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="ui_ComparePage.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="ui_DailyDialog.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="ui_DailyPage.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="ui_DepositDlg.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="ui_DepositPage.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="ui_DetailWindow.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="ui_GridWidget.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="ui_HistoryPage.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="ui_InterestRateDlg.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="ui_MainWindow.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="ui_PasswordDlg.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="ui_PieWidget.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="ui_ProgressWidget.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="ui_SettingDlg.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
+			<Filter
+				Name="Debug"
+				Filter="cpp;moc"
+				SourceControlFiles="false"
+				>
+				<File
+					RelativePath=".\Debug\moc_AutoDialog.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_AutoListDialog.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_BankDlg.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_CategoryComboBox.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_CategoryEditDialog.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_CategoryListDialog.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_CategoryModel.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_ComparePage.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_DailyDialog.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_DailyModel.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_DailyPage.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_DepositDlg.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_DepositPage.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_DetailWindow.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_GridWidget.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_HistoryPage.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_MainWindow.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_MyHeaderView.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_MyThread.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_PasswordDlg.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_PieModel.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_PieView.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_PieWidget.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_ProgressChartView.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_ProgressWidget.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_qtcolorcombobox.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Debug\moc_SettingDlg.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+			</Filter>
+			<Filter
+				Name="Release"
+				Filter="cpp;moc"
+				SourceControlFiles="false"
+				>
+				<File
+					RelativePath=".\Release\moc_AutoDialog.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_AutoListDialog.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_BankDlg.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_CategoryComboBox.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_CategoryEditDialog.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_CategoryListDialog.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_CategoryModel.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_ComparePage.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_DailyDialog.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_DailyModel.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_DailyPage.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_DepositDlg.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_DepositPage.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_DetailWindow.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_GridWidget.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_HistoryPage.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_MainWindow.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_MyHeaderView.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_MyThread.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_PasswordDlg.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_PieModel.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_PieView.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_PieWidget.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_ProgressChartView.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_ProgressWidget.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_qtcolorcombobox.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Release\moc_SettingDlg.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="true"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Form Files"
@@ -1875,8 +2431,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC AutoDialog.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_AutoDialog.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe AutoDialog.ui -o ui_AutoDialog.h&#x0D;&#x0A;"
-						AdditionalDependencies="AutoDialog.ui;CategoryComboBox.h;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe AutoDialog.ui -o ui_AutoDialog.h&#x0D;&#x0A;"
+						AdditionalDependencies="AutoDialog.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_AutoDialog.h"
 					/>
 				</FileConfiguration>
@@ -1886,8 +2442,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC AutoDialog.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_AutoDialog.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe AutoDialog.ui -o ui_AutoDialog.h&#x0D;&#x0A;"
-						AdditionalDependencies="AutoDialog.ui;CategoryComboBox.h;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe AutoDialog.ui -o ui_AutoDialog.h&#x0D;&#x0A;"
+						AdditionalDependencies="AutoDialog.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_AutoDialog.h"
 					/>
 				</FileConfiguration>
@@ -1901,8 +2457,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC AutoListDialog.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_AutoListDialog.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe AutoListDialog.ui -o ui_AutoListDialog.h&#x0D;&#x0A;"
-						AdditionalDependencies="AutoListDialog.ui;MyTableView.h;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe AutoListDialog.ui -o ui_AutoListDialog.h&#x0D;&#x0A;"
+						AdditionalDependencies="AutoListDialog.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_AutoListDialog.h"
 					/>
 				</FileConfiguration>
@@ -1912,8 +2468,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC AutoListDialog.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_AutoListDialog.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe AutoListDialog.ui -o ui_AutoListDialog.h&#x0D;&#x0A;"
-						AdditionalDependencies="AutoListDialog.ui;MyTableView.h;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe AutoListDialog.ui -o ui_AutoListDialog.h&#x0D;&#x0A;"
+						AdditionalDependencies="AutoListDialog.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_AutoListDialog.h"
 					/>
 				</FileConfiguration>
@@ -1927,8 +2483,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC BankDlg.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_BankDlg.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe BankDlg.ui -o ui_BankDlg.h&#x0D;&#x0A;"
-						AdditionalDependencies="BankDlg.ui;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe BankDlg.ui -o ui_BankDlg.h&#x0D;&#x0A;"
+						AdditionalDependencies="BankDlg.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_BankDlg.h"
 					/>
 				</FileConfiguration>
@@ -1938,8 +2494,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC BankDlg.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_BankDlg.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe BankDlg.ui -o ui_BankDlg.h&#x0D;&#x0A;"
-						AdditionalDependencies="BankDlg.ui;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe BankDlg.ui -o ui_BankDlg.h&#x0D;&#x0A;"
+						AdditionalDependencies="BankDlg.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_BankDlg.h"
 					/>
 				</FileConfiguration>
@@ -1953,8 +2509,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC CategoryEditDialog.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_CategoryEditDialog.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe CategoryEditDialog.ui -o ui_CategoryEditDialog.h&#x0D;&#x0A;"
-						AdditionalDependencies="..\MyComboBox\MyComboBox.h;CategoryComboBox.h;CategoryEditDialog.ui;Rem;qtcolorcombobox.h"
+						CommandLine="$(QTDIR)\bin\uic.exe CategoryEditDialog.ui -o ui_CategoryEditDialog.h&#x0D;&#x0A;"
+						AdditionalDependencies="CategoryEditDialog.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_CategoryEditDialog.h"
 					/>
 				</FileConfiguration>
@@ -1964,8 +2520,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC CategoryEditDialog.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_CategoryEditDialog.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe CategoryEditDialog.ui -o ui_CategoryEditDialog.h&#x0D;&#x0A;"
-						AdditionalDependencies="..\MyComboBox\MyComboBox.h;CategoryComboBox.h;CategoryEditDialog.ui;Rem;qtcolorcombobox.h"
+						CommandLine="$(QTDIR)\bin\uic.exe CategoryEditDialog.ui -o ui_CategoryEditDialog.h&#x0D;&#x0A;"
+						AdditionalDependencies="CategoryEditDialog.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_CategoryEditDialog.h"
 					/>
 				</FileConfiguration>
@@ -1979,8 +2535,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC CategoryListDialog.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_CategoryListDialog.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe CategoryListDialog.ui -o ui_CategoryListDialog.h&#x0D;&#x0A;"
-						AdditionalDependencies="CategoryListDialog.ui;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe CategoryListDialog.ui -o ui_CategoryListDialog.h&#x0D;&#x0A;"
+						AdditionalDependencies="CategoryListDialog.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_CategoryListDialog.h"
 					/>
 				</FileConfiguration>
@@ -1990,8 +2546,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC CategoryListDialog.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_CategoryListDialog.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe CategoryListDialog.ui -o ui_CategoryListDialog.h&#x0D;&#x0A;"
-						AdditionalDependencies="CategoryListDialog.ui;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe CategoryListDialog.ui -o ui_CategoryListDialog.h&#x0D;&#x0A;"
+						AdditionalDependencies="CategoryListDialog.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_CategoryListDialog.h"
 					/>
 				</FileConfiguration>
@@ -2005,8 +2561,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC ComparePage.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_ComparePage.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe ComparePage.ui -o ui_ComparePage.h&#x0D;&#x0A;"
-						AdditionalDependencies="BarView.h;ComparePage.ui;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe ComparePage.ui -o ui_ComparePage.h&#x0D;&#x0A;"
+						AdditionalDependencies="ComparePage.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_ComparePage.h"
 					/>
 				</FileConfiguration>
@@ -2016,8 +2572,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC ComparePage.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_ComparePage.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe ComparePage.ui -o ui_ComparePage.h&#x0D;&#x0A;"
-						AdditionalDependencies="BarView.h;ComparePage.ui;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe ComparePage.ui -o ui_ComparePage.h&#x0D;&#x0A;"
+						AdditionalDependencies="ComparePage.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_ComparePage.h"
 					/>
 				</FileConfiguration>
@@ -2031,8 +2587,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC DailyDialog.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_DailyDialog.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe DailyDialog.ui -o ui_DailyDialog.h&#x0D;&#x0A;"
-						AdditionalDependencies="CategoryComboBox.h;DailyDialog.ui;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe DailyDialog.ui -o ui_DailyDialog.h&#x0D;&#x0A;"
+						AdditionalDependencies="DailyDialog.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_DailyDialog.h"
 					/>
 				</FileConfiguration>
@@ -2042,8 +2598,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC DailyDialog.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_DailyDialog.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe DailyDialog.ui -o ui_DailyDialog.h&#x0D;&#x0A;"
-						AdditionalDependencies="CategoryComboBox.h;DailyDialog.ui;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe DailyDialog.ui -o ui_DailyDialog.h&#x0D;&#x0A;"
+						AdditionalDependencies="DailyDialog.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_DailyDialog.h"
 					/>
 				</FileConfiguration>
@@ -2057,8 +2613,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC DailyPage.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_DailyPage.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe DailyPage.ui -o ui_DailyPage.h&#x0D;&#x0A;"
-						AdditionalDependencies="CategoryComboBox.h;DailyPage.ui;MyTableView.h;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe DailyPage.ui -o ui_DailyPage.h&#x0D;&#x0A;"
+						AdditionalDependencies="DailyPage.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_DailyPage.h"
 					/>
 				</FileConfiguration>
@@ -2068,8 +2624,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC DailyPage.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_DailyPage.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe DailyPage.ui -o ui_DailyPage.h&#x0D;&#x0A;"
-						AdditionalDependencies="CategoryComboBox.h;DailyPage.ui;MyTableView.h;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe DailyPage.ui -o ui_DailyPage.h&#x0D;&#x0A;"
+						AdditionalDependencies="DailyPage.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_DailyPage.h"
 					/>
 				</FileConfiguration>
@@ -2083,8 +2639,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC DepositDlg.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_DepositDlg.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe DepositDlg.ui -o ui_DepositDlg.h&#x0D;&#x0A;"
-						AdditionalDependencies="DepositDlg.ui;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe DepositDlg.ui -o ui_DepositDlg.h&#x0D;&#x0A;"
+						AdditionalDependencies="DepositDlg.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_DepositDlg.h"
 					/>
 				</FileConfiguration>
@@ -2094,8 +2650,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC DepositDlg.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_DepositDlg.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe DepositDlg.ui -o ui_DepositDlg.h&#x0D;&#x0A;"
-						AdditionalDependencies="DepositDlg.ui;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe DepositDlg.ui -o ui_DepositDlg.h&#x0D;&#x0A;"
+						AdditionalDependencies="DepositDlg.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_DepositDlg.h"
 					/>
 				</FileConfiguration>
@@ -2109,8 +2665,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC DepositPage.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_DepositPage.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe DepositPage.ui -o ui_DepositPage.h&#x0D;&#x0A;"
-						AdditionalDependencies="DepositPage.ui;MyTableView.h;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe DepositPage.ui -o ui_DepositPage.h&#x0D;&#x0A;"
+						AdditionalDependencies="DepositPage.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_DepositPage.h"
 					/>
 				</FileConfiguration>
@@ -2120,8 +2676,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC DepositPage.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_DepositPage.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe DepositPage.ui -o ui_DepositPage.h&#x0D;&#x0A;"
-						AdditionalDependencies="DepositPage.ui;MyTableView.h;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe DepositPage.ui -o ui_DepositPage.h&#x0D;&#x0A;"
+						AdditionalDependencies="DepositPage.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_DepositPage.h"
 					/>
 				</FileConfiguration>
@@ -2135,8 +2691,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC DetailWindow.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_DetailWindow.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe DetailWindow.ui -o ui_DetailWindow.h&#x0D;&#x0A;"
-						AdditionalDependencies="DetailWindow.ui;MyTableView.h;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe DetailWindow.ui -o ui_DetailWindow.h&#x0D;&#x0A;"
+						AdditionalDependencies="DetailWindow.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_DetailWindow.h"
 					/>
 				</FileConfiguration>
@@ -2146,8 +2702,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC DetailWindow.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_DetailWindow.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe DetailWindow.ui -o ui_DetailWindow.h&#x0D;&#x0A;"
-						AdditionalDependencies="DetailWindow.ui;MyTableView.h;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe DetailWindow.ui -o ui_DetailWindow.h&#x0D;&#x0A;"
+						AdditionalDependencies="DetailWindow.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_DetailWindow.h"
 					/>
 				</FileConfiguration>
@@ -2161,8 +2717,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC GridWidget.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_GridWidget.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe GridWidget.ui -o ui_GridWidget.h&#x0D;&#x0A;"
-						AdditionalDependencies="GridWidget.ui;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe GridWidget.ui -o ui_GridWidget.h&#x0D;&#x0A;"
+						AdditionalDependencies="GridWidget.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_GridWidget.h"
 					/>
 				</FileConfiguration>
@@ -2172,8 +2728,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC GridWidget.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_GridWidget.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe GridWidget.ui -o ui_GridWidget.h&#x0D;&#x0A;"
-						AdditionalDependencies="GridWidget.ui;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe GridWidget.ui -o ui_GridWidget.h&#x0D;&#x0A;"
+						AdditionalDependencies="GridWidget.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_GridWidget.h"
 					/>
 				</FileConfiguration>
@@ -2187,8 +2743,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC HistoryPage.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_HistoryPage.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe HistoryPage.ui -o ui_HistoryPage.h&#x0D;&#x0A;"
-						AdditionalDependencies="CategoryComboBox.h;HistoryPage.ui;ProgressWidget.h;Rem;gridwidget.h;piewidget.h"
+						CommandLine="$(QTDIR)\bin\uic.exe HistoryPage.ui -o ui_HistoryPage.h&#x0D;&#x0A;"
+						AdditionalDependencies="HistoryPage.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_HistoryPage.h"
 					/>
 				</FileConfiguration>
@@ -2198,8 +2754,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC HistoryPage.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_HistoryPage.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe HistoryPage.ui -o ui_HistoryPage.h&#x0D;&#x0A;"
-						AdditionalDependencies="CategoryComboBox.h;HistoryPage.ui;ProgressWidget.h;Rem;gridwidget.h;piewidget.h"
+						CommandLine="$(QTDIR)\bin\uic.exe HistoryPage.ui -o ui_HistoryPage.h&#x0D;&#x0A;"
+						AdditionalDependencies="HistoryPage.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_HistoryPage.h"
 					/>
 				</FileConfiguration>
@@ -2213,8 +2769,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC InterestRateDlg.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_InterestRateDlg.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe InterestRateDlg.ui -o ui_InterestRateDlg.h&#x0D;&#x0A;"
-						AdditionalDependencies="InterestRateDlg.ui;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe InterestRateDlg.ui -o ui_InterestRateDlg.h&#x0D;&#x0A;"
+						AdditionalDependencies="InterestRateDlg.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_InterestRateDlg.h"
 					/>
 				</FileConfiguration>
@@ -2224,8 +2780,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC InterestRateDlg.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_InterestRateDlg.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe InterestRateDlg.ui -o ui_InterestRateDlg.h&#x0D;&#x0A;"
-						AdditionalDependencies="InterestRateDlg.ui;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe InterestRateDlg.ui -o ui_InterestRateDlg.h&#x0D;&#x0A;"
+						AdditionalDependencies="InterestRateDlg.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_InterestRateDlg.h"
 					/>
 				</FileConfiguration>
@@ -2239,8 +2795,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC MainWindow.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_MainWindow.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe MainWindow.ui -o ui_MainWindow.h&#x0D;&#x0A;"
-						AdditionalDependencies="MainWindow.ui;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe MainWindow.ui -o ui_MainWindow.h&#x0D;&#x0A;"
+						AdditionalDependencies="MainWindow.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_MainWindow.h"
 					/>
 				</FileConfiguration>
@@ -2250,8 +2806,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC MainWindow.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_MainWindow.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe MainWindow.ui -o ui_MainWindow.h&#x0D;&#x0A;"
-						AdditionalDependencies="MainWindow.ui;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe MainWindow.ui -o ui_MainWindow.h&#x0D;&#x0A;"
+						AdditionalDependencies="MainWindow.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_MainWindow.h"
 					/>
 				</FileConfiguration>
@@ -2265,8 +2821,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC PasswordDlg.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_PasswordDlg.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe PasswordDlg.ui -o ui_PasswordDlg.h&#x0D;&#x0A;"
-						AdditionalDependencies="PasswordDlg.ui;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe PasswordDlg.ui -o ui_PasswordDlg.h&#x0D;&#x0A;"
+						AdditionalDependencies="PasswordDlg.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_PasswordDlg.h"
 					/>
 				</FileConfiguration>
@@ -2276,8 +2832,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC PasswordDlg.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_PasswordDlg.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe PasswordDlg.ui -o ui_PasswordDlg.h&#x0D;&#x0A;"
-						AdditionalDependencies="PasswordDlg.ui;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe PasswordDlg.ui -o ui_PasswordDlg.h&#x0D;&#x0A;"
+						AdditionalDependencies="PasswordDlg.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_PasswordDlg.h"
 					/>
 				</FileConfiguration>
@@ -2291,8 +2847,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC PieWidget.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_PieWidget.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe PieWidget.ui -o ui_PieWidget.h&#x0D;&#x0A;"
-						AdditionalDependencies="PieWidget.ui;Rem;pieview.h"
+						CommandLine="$(QTDIR)\bin\uic.exe PieWidget.ui -o ui_PieWidget.h&#x0D;&#x0A;"
+						AdditionalDependencies="PieWidget.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_PieWidget.h"
 					/>
 				</FileConfiguration>
@@ -2302,8 +2858,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC PieWidget.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_PieWidget.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe PieWidget.ui -o ui_PieWidget.h&#x0D;&#x0A;"
-						AdditionalDependencies="PieWidget.ui;Rem;pieview.h"
+						CommandLine="$(QTDIR)\bin\uic.exe PieWidget.ui -o ui_PieWidget.h&#x0D;&#x0A;"
+						AdditionalDependencies="PieWidget.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_PieWidget.h"
 					/>
 				</FileConfiguration>
@@ -2317,8 +2873,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC ProgressWidget.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_ProgressWidget.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe ProgressWidget.ui -o ui_ProgressWidget.h&#x0D;&#x0A;"
-						AdditionalDependencies="BarView.h;KView.h;ProgressWidget.ui;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe ProgressWidget.ui -o ui_ProgressWidget.h&#x0D;&#x0A;"
+						AdditionalDependencies="ProgressWidget.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_ProgressWidget.h"
 					/>
 				</FileConfiguration>
@@ -2328,8 +2884,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC ProgressWidget.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_ProgressWidget.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe ProgressWidget.ui -o ui_ProgressWidget.h&#x0D;&#x0A;"
-						AdditionalDependencies="BarView.h;KView.h;ProgressWidget.ui;Rem"
+						CommandLine="$(QTDIR)\bin\uic.exe ProgressWidget.ui -o ui_ProgressWidget.h&#x0D;&#x0A;"
+						AdditionalDependencies="ProgressWidget.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_ProgressWidget.h"
 					/>
 				</FileConfiguration>
@@ -2343,8 +2899,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC SettingDlg.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_SettingDlg.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe SettingDlg.ui -o ui_SettingDlg.h&#x0D;&#x0A;"
-						AdditionalDependencies="Rem;SettingDlg.ui"
+						CommandLine="$(QTDIR)\bin\uic.exe SettingDlg.ui -o ui_SettingDlg.h&#x0D;&#x0A;"
+						AdditionalDependencies="SettingDlg.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_SettingDlg.h"
 					/>
 				</FileConfiguration>
@@ -2354,8 +2910,8 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="UIC SettingDlg.ui"
-						CommandLine="Rem IncrediBuild_AllowRemote&#x0D;&#x0A;Rem IncrediBuild_OutputFile .\ui_SettingDlg.h&#x0D;&#x0A;C:\Qt\4.6.3\bin\uic.exe SettingDlg.ui -o ui_SettingDlg.h&#x0D;&#x0A;"
-						AdditionalDependencies="Rem;SettingDlg.ui"
+						CommandLine="$(QTDIR)\bin\uic.exe SettingDlg.ui -o ui_SettingDlg.h&#x0D;&#x0A;"
+						AdditionalDependencies="SettingDlg.ui;$(QTDIR)\bin\uic.exe"
 						Outputs="ui_SettingDlg.h"
 					/>
 				</FileConfiguration>
@@ -2368,48 +2924,224 @@
 			ParseFiles="false"
 			>
 			<File
-				RelativePath="Images\add_user.png"
+				RelativePath=".\Images\add_user.png"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="Images\apply.png"
+				RelativePath=".\Images\apply.png"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="Images\calc1.png"
+				RelativePath=".\Images\calc1.png"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="Images\edit_add.png"
+				RelativePath=".\Images\edit_add.png"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="Images\edit_remove.png"
+				RelativePath=".\Images\edit_remove.png"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="Images\editdelete.png"
+				RelativePath=".\Images\editdelete.png"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="Images\exit.png"
+				RelativePath=".\Images\exit.png"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="Images\find.png"
+				RelativePath=".\Images\find.png"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="Images\Floppy.png"
+				RelativePath=".\Images\Floppy.png"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="Images\help.png"
+				RelativePath=".\Images\help.png"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="Images\kchart.png"
+				RelativePath=".\Images\kchart.png"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="Money.qrc"
@@ -2419,10 +3151,10 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="RCC Money.qrc"
-						CommandLine="C:\Qt\4.6.3\bin\rcc.exe -name Money Money.qrc -o debug\qrc_Money.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="C:\Qt\4.6.3\bin\rcc.exe;Images\Floppy.png;Images\Money3.png;Images\Notepad2.png;Images\Options.png;Images\PieChart.png;Images\PieChart3.png;Images\Search_02.png;Images\Shopping.png;Images\Sun.png;Images\add_user.png;Images\apply.png;Images\calc1.png;Images\edit_add.png;Images\edit_remove.png;Images\editdelete.png;Images\exit.png;Images\find.png;Images\help.png;Images\kchart.png;Images\moon.png;Images\ni_png_2_1876.png;Images\webdev_money.png;Money.qrc"
-						Outputs="debug\qrc_Money.cpp"
+						Description="Rcc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\rcc.exe&quot; -name &quot;$(InputName)&quot; -no-compress &quot;$(InputPath)&quot; -o .\GeneratedFiles\qrc_$(InputName).cpp&#x0D;&#x0A;"
+						AdditionalDependencies="$(InputPath);.\Images\webdev_money.png;.\Images\find.png;.\Images\exit.png;.\Images\help.png;.\Images\ni_png_2_1876.png;.\Images\Floppy.png;.\Images\Money3.png;.\Images\Notepad2.png;.\Images\Options.png;.\Images\PieChart.png;.\Images\PieChart3.png;.\Images\Search_02.png;.\Images\Shopping.png;.\Images\Sun.png;.\Images\add_user.png;.\Images\apply.png;.\Images\calc1.png;.\Images\edit_add.png;.\Images\edit_remove.png;.\Images\editdelete.png;.\Images\kchart.png;.\Images\moon.png"
+						Outputs=".\GeneratedFiles\qrc_$(InputName).cpp"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -2430,56 +3162,232 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="RCC Money.qrc"
-						CommandLine="C:\Qt\4.6.3\bin\rcc.exe -name Money Money.qrc -o release\qrc_Money.cpp&#x0D;&#x0A;"
-						AdditionalDependencies="C:\Qt\4.6.3\bin\rcc.exe;Images\Floppy.png;Images\Money3.png;Images\Notepad2.png;Images\Options.png;Images\PieChart.png;Images\PieChart3.png;Images\Search_02.png;Images\Shopping.png;Images\Sun.png;Images\add_user.png;Images\apply.png;Images\calc1.png;Images\edit_add.png;Images\edit_remove.png;Images\editdelete.png;Images\exit.png;Images\find.png;Images\help.png;Images\kchart.png;Images\moon.png;Images\ni_png_2_1876.png;Images\webdev_money.png;Money.qrc"
-						Outputs="release\qrc_Money.cpp"
+						Description="Rcc&apos;ing $(InputFileName)..."
+						CommandLine="&quot;$(QTDIR)\bin\rcc.exe&quot; -name &quot;$(InputName)&quot; -no-compress &quot;$(InputPath)&quot; -o .\GeneratedFiles\qrc_$(InputName).cpp&#x0D;&#x0A;"
+						AdditionalDependencies="$(InputPath);.\Images\webdev_money.png;.\Images\find.png;.\Images\exit.png;.\Images\help.png;.\Images\ni_png_2_1876.png;.\Images\Floppy.png;.\Images\Money3.png;.\Images\Notepad2.png;.\Images\Options.png;.\Images\PieChart.png;.\Images\PieChart3.png;.\Images\Search_02.png;.\Images\Shopping.png;.\Images\Sun.png;.\Images\add_user.png;.\Images\apply.png;.\Images\calc1.png;.\Images\edit_add.png;.\Images\edit_remove.png;.\Images\editdelete.png;.\Images\kchart.png;.\Images\moon.png"
+						Outputs=".\GeneratedFiles\qrc_$(InputName).cpp"
 					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="Images\Money3.png"
+				RelativePath=".\Images\Money3.png"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="Images\moon.png"
+				RelativePath=".\Images\moon.png"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="Images\ni_png_2_1876.png"
+				RelativePath=".\Images\ni_png_2_1876.png"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="Images\Notepad2.png"
+				RelativePath=".\Images\Notepad2.png"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="Images\Options.png"
+				RelativePath=".\Images\Options.png"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="Images\PieChart.png"
+				RelativePath=".\Images\PieChart.png"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="Images\PieChart3.png"
+				RelativePath=".\Images\PieChart3.png"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="Images\Search_02.png"
+				RelativePath=".\Images\Search_02.png"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="Images\Shopping.png"
+				RelativePath=".\Images\Shopping.png"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="Images\Sun.png"
+				RelativePath=".\Images\Sun.png"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="Images\webdev_money.png"
+				RelativePath=".\Images\webdev_money.png"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
 			</File>
 		</Filter>
 		<File
@@ -2488,5 +3396,13 @@
 		</File>
 	</Files>
 	<Globals>
+		<Global
+			Name="QtVersion Win32"
+			Value="4.7.2"
+		/>
+		<Global
+			Name="RccDir"
+			Value=".\GeneratedFiles"
+		/>
 	</Globals>
 </VisualStudioProject>

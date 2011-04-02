@@ -55,7 +55,7 @@
        <property name="font">
         <font>
          <family>华文黑体</family>
-         <pointsize>16</pointsize>
+         <pointsize>12</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -65,6 +65,9 @@
        </property>
        <property name="horizontalScrollBarPolicy">
         <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
        </property>
        <property name="iconSize">
         <size>
@@ -148,7 +151,7 @@
      <x>0</x>
      <y>0</y>
      <width>718</width>
-     <height>22</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_About">

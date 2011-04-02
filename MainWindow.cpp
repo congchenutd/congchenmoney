@@ -56,6 +56,7 @@ void MainWindow::initView()
 	ui.stackedWidget->addWidget(incomeHistoryPage);
 	ui.stackedWidget->addWidget(comparePage);
 	setWindowTitle("My Money");
+	ui.listWidget->setMovement(QListView::Static);
 }
 
 void MainWindow::initConnections()

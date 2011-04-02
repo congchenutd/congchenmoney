@@ -9,7 +9,7 @@ CategoryEditDialog::CategoryEditDialog(const QString& table, QWidget *parent)
 	ui.setupUi(this);
 	initColors();
 	ui.comboBoxParent->setTable(table);
-	ui.comboBoxUsers->loadFromTable("Users");
+//	ui.comboBoxUsers->loadFromTable("Users");
 	connect(ui.comboBoxParent, SIGNAL(activated(int)), this, SLOT(slotChooseParent(int)));
 }
 

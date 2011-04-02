@@ -86,7 +86,7 @@
     </widget>
    </item>
    <item row="3" column="1">
-    <widget class="MyComboBox" name="comboBoxUsers">
+    <widget class="SetTextComboBox" name="comboBoxUsers">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
        <horstretch>0</horstretch>
@@ -142,9 +142,9 @@
    <header>qtcolorcombobox.h</header>
   </customwidget>
   <customwidget>
-   <class>MyComboBox</class>
+   <class>SetTextComboBox</class>
    <extends>QComboBox</extends>
-   <header>../MyComboBox/MyComboBox.h</header>
+   <header>../MyComboBox/SetTextComboBox.h</header>
   </customwidget>
  </customwidgets>
  <resources>

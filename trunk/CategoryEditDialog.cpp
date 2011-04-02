@@ -2,6 +2,7 @@
 #include <QSqlQuery>
 #include <algorithm>
 #include "CategoryEditDialog.h"
+#include <QSqlTableModel>
 
 CategoryEditDialog::CategoryEditDialog(const QString& table, QWidget *parent) 
 	: QDialog(parent), categoryTableName(table)
@@ -9,7 +10,12 @@ CategoryEditDialog::CategoryEditDialog(const QString& table, QWidget *parent)
 	ui.setupUi(this);
 	initColors();
 	ui.comboBoxParent->setTable(table);
-//	ui.comboBoxUsers->loadFromTable("Users");
+
+	QSqlTableModel* model = new QSqlTableModel(this);
+	model->setTable("Users");
+	model->select();
+	ui.comboBoxUsers->setModel(model);
+
 	connect(ui.comboBoxParent, SIGNAL(activated(int)), this, SLOT(slotChooseParent(int)));
 }
 
@@ -32,7 +38,7 @@ QString CategoryEditDialog::getName() const
 {
 	QString subtypeName = ui.lineEdit->text();
 	QString parentName  = ui.comboBoxParent->currentText();
-	if(parentName == tr("未分类"))
+	if(parentName == tr("NoCategory"))
 		return subtypeName;
 	else
 		return parentName + " - " + subtypeName;
@@ -61,7 +67,7 @@ int CategoryEditDialog::getParent() const
 	query.exec(tr("SELECT id FROM %1 WHERE name = \"%2\"")
 					.arg(categoryTableName)
 					.arg(ui.comboBoxParent->currentText()));
-	return query.next() ? query.value(0).toInt() : 1;   // 1 for 未分类
+	return query.next() ? query.value(0).toInt() : 1;   // 1 for NoCategory
 }
 
 void CategoryEditDialog::setParent(int parent)

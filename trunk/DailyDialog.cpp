@@ -51,7 +51,7 @@ void DailyDialog::initConnections()
 void DailyDialog::clearData()
 {
 	setAmount(0);
-	setCategory(tr("未分类"));
+	setCategory(tr("NoCategory"));
 	setDescription("");
 	ui.buttonNew->setEnabled(false);
 	ui.doubleSpinBox->setFocus();
@@ -112,7 +112,7 @@ void DailyDialog::accept()
 {
 	if(getAmount() <= 0)
 	{
-		QMessageBox::critical(this, tr("错误"), tr("金额不能为0"));
+		QMessageBox::critical(this, tr("Error"), tr("Amount can not be zero"));
 		return;
 	}
 	QDialog::accept();
@@ -121,7 +121,7 @@ void DailyDialog::accept()
 void DailyDialog::slotSetUser()
 {
 	QSqlQuery query;
-	query.exec(tr("SELECT defaultUser FROM %1 WHERE name = \'%2\'")
+	query.exec(tr("SELECT defaultUser FROM %1 WHERE name = \"%2\"")
 			.arg(categoryTableName).arg(ui.comboBoxCategory->currentText()));
 	if(query.next())
 		ui.comboBoxUser->setCurrentText(query.value(0).toString());
@@ -135,6 +135,6 @@ void DailyDialog::slotTax()
 
 void DailyDialog::loadTaxRate()
 {
-	UserSetting* setting = MySetting<UserSetting>::getInstance("Global");
+	UserSetting* setting = MySetting<UserSetting>::getInstance();
 	ui.doubleSpinBoxTax->setValue(setting->value("TaxRate").toDouble());
 }

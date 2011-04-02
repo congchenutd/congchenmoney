@@ -10,7 +10,7 @@ void CategoryComboBox::setTable(const QString& table)
 
 	// load text and sort
 	QSqlQuery query;
-	query.exec(tr("SELECT name FROM %1 WHERE name != \'未分类\' ORDER By name").arg(table));
+	query.exec(tr("SELECT name FROM %1 WHERE name != \"NoCategory\" ORDER By name").arg(table));
 	while(query.next())
 	{
 		QString cateName = query.value(0).toString();
@@ -24,7 +24,7 @@ void CategoryComboBox::setTable(const QString& table)
 			addItem(cateName);
 	}
 //	sort();
-	insertItem(0, tr("未分类"));
+	insertItem(0, tr("NoCategory"));
 
 	// set color
 	for(int i=0; i<count(); ++i)
@@ -69,13 +69,13 @@ QString CategoryComboBox::getCategoryName(const QString& tableName, int id)
 	QSqlQuery query;
 	query.exec(tr("SELECT name FROM %1 WHERE id = %2").arg(tableName)
 													  .arg(id));
-	return query.next() ? query.value(0).toString() : tr("未分类");
+	return query.next() ? query.value(0).toString() : tr("NoCategory");
 }
 
 QColor CategoryComboBox::getCategoryColor(const QString& tableName, const QString& cateName)
 {
 	QSqlQuery query;
-	query.exec(tr("SELECT color FROM %1 WHERE name = \'%2\'").arg(tableName)
+	query.exec(tr("SELECT color FROM %1 WHERE name = \"%2\"").arg(tableName)
 															 .arg(cateName));
 	return query.next() ? query.value(0).toInt() : 0;
 }

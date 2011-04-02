@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>442</width>
-    <height>306</height>
+    <width>495</width>
+    <height>297</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>设置</string>
+   <string>Setting</string>
   </property>
   <property name="windowIcon">
    <iconset resource="Money.qrc">
@@ -21,13 +21,13 @@
    <item row="0" column="0" colspan="2">
     <widget class="QGroupBox" name="groupBox_2">
      <property name="title">
-      <string>路径</string>
+      <string>Paths</string>
      </property>
      <layout class="QGridLayout" name="gridLayout">
       <item row="0" column="0">
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>数据库文件</string>
+         <string>Database file</string>
         </property>
        </widget>
       </item>
@@ -51,7 +51,7 @@
       <item row="1" column="0">
        <widget class="QLabel" name="label_5">
         <property name="text">
-         <string>计算器路径</string>
+         <string>Calculator</string>
         </property>
        </widget>
       </item>
@@ -78,7 +78,7 @@
    <item row="1" column="0">
     <widget class="QGroupBox" name="groupBox_4">
      <property name="title">
-      <string>其它</string>
+      <string>Miscellaneous</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
@@ -86,7 +86,7 @@
         <item>
          <widget class="QCheckBox" name="checkBoxAutoBackup">
           <property name="text">
-           <string>自动备份</string>
+           <string>Auto backup</string>
           </property>
          </widget>
         </item>
@@ -106,14 +106,14 @@
         <item>
          <widget class="QLabel" name="label_3">
           <property name="text">
-           <string>保留</string>
+           <string>Keep</string>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QSpinBox" name="spinBoxBackupDays">
           <property name="suffix">
-           <string> 天</string>
+           <string> day(s)</string>
           </property>
           <property name="value">
            <number>7</number>
@@ -127,7 +127,7 @@
         <item>
          <widget class="QLabel" name="label_4">
           <property name="text">
-           <string>消费税率</string>
+           <string>Tax rate</string>
           </property>
          </widget>
         </item>
@@ -156,7 +156,7 @@
       <item>
        <widget class="QPushButton" name="buttonGuiFont">
         <property name="text">
-         <string>界面字体</string>
+         <string>Font</string>
         </property>
         <property name="autoDefault">
          <bool>false</bool>
@@ -169,7 +169,7 @@
    <item row="1" column="1">
     <widget class="QGroupBox" name="groupBox_3">
      <property name="title">
-      <string>用户</string>
+      <string>User</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
       <item row="0" column="0" colspan="2">
@@ -177,7 +177,7 @@
         <item>
          <widget class="QLabel" name="label_2">
           <property name="text">
-           <string>用户名</string>
+           <string>User name</string>
           </property>
          </widget>
         </item>
@@ -196,21 +196,14 @@
       <item row="1" column="0">
        <widget class="QPushButton" name="buttonAddUser">
         <property name="text">
-         <string>添加</string>
+         <string>Add</string>
         </property>
        </widget>
       </item>
       <item row="1" column="1">
        <widget class="QPushButton" name="buttonDelUser">
         <property name="text">
-         <string>删除</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0" colspan="2">
-       <widget class="QPushButton" name="buttonPassword">
-        <property name="text">
-         <string>管理员密码</string>
+         <string>Delete</string>
         </property>
        </widget>
       </item>

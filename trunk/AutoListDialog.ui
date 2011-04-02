@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>自动添加</string>
+   <string>Auto add</string>
   </property>
   <property name="windowIcon">
    <iconset resource="Money.qrc">

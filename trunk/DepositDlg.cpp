@@ -97,7 +97,7 @@ void DepositDlg::slotCalcInterests()
 	ui.dSpinBoxInterests->setValue(interests);
 
 	QSqlQuery query;
-	query.exec(tr("select 利率 from InterestRate where 存期 = \'利息税率\'"));
+	query.exec(tr("select Interest from InterestRate where Interval = \"利息税率\""));
 	double taxRate = query.next() ? query.value(0).toDouble() : 0;
 	ui.dSpinBoxInterestsReal->setValue(interests * (1-taxRate/100));
 }

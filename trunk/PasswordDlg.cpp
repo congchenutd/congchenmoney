@@ -10,7 +10,7 @@ PasswordDlg::PasswordDlg(QWidget *parent) : QDialog(parent)
 
 void PasswordDlg::accept()
 {
-	UserSetting* setting = UserSetting::getInstance("Global");
+	UserSetting* setting = UserSetting::getInstance();
 	if(ui.lineEditOld->text() != setting->getPassword())
 	{
 		QMessageBox::critical(this, tr("´íÎó"), tr("Ô­ÃÜÂë´íÎó"));

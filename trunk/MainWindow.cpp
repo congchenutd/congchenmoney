@@ -26,7 +26,7 @@ MainWindow::MainWindow(QWidget *parent, Qt::WFlags flags)
 
 MainWindow::~MainWindow()
 {
-	UserSetting* setting = MySetting<UserSetting>::getInstance("Global");
+	UserSetting* setting = MySetting<UserSetting>::getInstance();
 	if(setting->value("AutoBackup").toBool())
 	{
 		delOldBackup();
@@ -90,7 +90,7 @@ void MainWindow::setFonts(const QFont& guiFont)
 
 void MainWindow::loadDBFileName()
 {
-	UserSetting* setting = MySetting<UserSetting>::getInstance("Global");
+	UserSetting* setting = MySetting<UserSetting>::getInstance();
 	fileName = setting->value("DBFileName").toString();
 	if(fileName.isEmpty())
 		fileName = "Money.db";
@@ -98,7 +98,7 @@ void MainWindow::loadDBFileName()
 
 void MainWindow::loadSettings()
 {
-	UserSetting* setting = MySetting<UserSetting>::getInstance("Global");
+	UserSetting* setting = MySetting<UserSetting>::getInstance();
 	setFonts(setting->getFont("GuiFont"));
 }
 
@@ -115,15 +115,15 @@ void MainWindow::slotSetting()
 
 void MainWindow::slotAbout() {
 	QMessageBox::about(this, tr("About"), tr("<h3><b>MyMoney</b></h3>"
-                                                                                         "<p>Build 2010.1.31</p>"
-											 "<p>基于GPL协议发布</p>"
+                                             "<p>Build 2010.1.31</p>"
+											 "<p>Based on GPL</p>"
 											 "<p>congchenutd@gmail.com</p>"));
 }
 
 void MainWindow::slotBackup()
 {
 	QString backupFileName = QFileDialog::getSaveFileName(this,
-		tr("另存数据库文件"),
+		tr("Save database"),
 		tr("./Backup/%1.db").arg(QDate::currentDate().toString(Qt::ISODate)),
 		"Database (*.db);;All Files (*.*)");
 
@@ -134,7 +134,7 @@ void MainWindow::slotBackup()
 void MainWindow::delOldBackup()
 {
 	const QDate today = QDate::currentDate();
-	const int   days  = MySetting<UserSetting>::getInstance("Global")->value("BackupDays").toInt();
+	const int   days  = MySetting<UserSetting>::getInstance()->value("BackupDays").toInt();
 	const QFileInfoList fileInfos = 
 		QDir("Backup").entryInfoList(QStringList() << "*.db", QDir::Files);
 	foreach(QFileInfo fileInfo, fileInfos)
@@ -160,13 +160,13 @@ void MainWindow::backup(const QString& name)
 void MainWindow::slotDeposits()
 {
 	bool ok;
-	QString pass = QInputDialog::getText(this, tr("密码"),
-		tr("管理员密码："), QLineEdit::Password, QString(), &ok);
+	QString pass = QInputDialog::getText(this, tr("Password"),
+		tr("Administrator password:"), QLineEdit::Password, QString(), &ok);
 	if(!ok)
 		return;
-	if(UserSetting::getInstance("Global")->getPassword() != pass)
+	if(UserSetting::getInstance()->getPassword() != pass)
 	{
-		QMessageBox::critical(this, tr("错误"), tr("密码错误"));
+		QMessageBox::critical(this, tr("Error"), tr("Wrong password"));
 		return;
 	}
 	DepositPage page(this);

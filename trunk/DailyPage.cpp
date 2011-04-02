@@ -33,12 +33,12 @@ void DailyPage::initModel()
 	model->setTable(tableName);
 	model->setRelation(Category, QSqlRelation(categoryTableName, "id", "name"));
 	model->select();
-	model->setHeaderData(ID,          Qt::Horizontal, tr("编号"));
-	model->setHeaderData(Date,        Qt::Horizontal, tr("日期"));
-	model->setHeaderData(Amount,      Qt::Horizontal, tr("金额"));
-	model->setHeaderData(Category,    Qt::Horizontal, tr("类别"));
-	model->setHeaderData(User,        Qt::Horizontal, tr("用户"));
-	model->setHeaderData(Description, Qt::Horizontal, tr("备注"));
+	model->setHeaderData(ID,          Qt::Horizontal, tr("ID"));
+	model->setHeaderData(Date,        Qt::Horizontal, tr("Date"));
+	model->setHeaderData(Amount,      Qt::Horizontal, tr("Amount"));
+	model->setHeaderData(Category,    Qt::Horizontal, tr("Category"));
+	model->setHeaderData(User,        Qt::Horizontal, tr("User"));
+	model->setHeaderData(Description, Qt::Horizontal, tr("Note"));
 }
 
 void DailyPage::initView()
@@ -48,6 +48,7 @@ void DailyPage::initView()
 	ui.tableView->sortByColumn(Date, Qt::DescendingOrder);
 	ui.tableView->horizontalHeader()->setStretchLastSection(true);
 	ui.tableView->setSectionSizeRatio(Category, 0.25);
+	ui.tableView->setSectionSizeRatio(Date, 0.1);
 	slotEnableSearch(false);
 	ui.comboCategory->setMaintypeOnly(false);
 }
@@ -83,15 +84,15 @@ void DailyPage::addRecord(const DailyRecord& record)
 
 QDate DailyPage::getDueDay(const QDate& last, QString interval) const
 {
-	if(interval == tr("每天"))
+	if(interval == tr("Every day"))
 		return last.addDays(1);
-	if(interval == tr("每周"))
+	if(interval == tr("Every week"))
 		return last.addDays(7);
-	if(interval == tr("每月"))
+	if(interval == tr("Every month"))
 		return last.addMonths(1);
-	if(interval == tr("每年"))
+	if(interval == tr("Every year"))
 		return last.addYears(1);
-	if(interval.endsWith(tr("个月")))
+	if(interval.endsWith(tr("month(s)")))
 	{
 		QString sub = interval.left(interval.length() - 2);
 		return last.addMonths(sub.toInt());
@@ -126,13 +127,13 @@ void DailyPage::slotCheckAuto()
 			record.cateID      = category;
 			record.cateName    = CategoryComboBox::getCategoryName(categoryTableName, category);
 			record.userName    = user;
-			record.description = tr("自动添加");
+			record.description = tr("Auto add");
 			if(aut)
 				addRecord(record);
 			else
 			{
 				DailyDialog dlg(outcome, this);
-				dlg.setWindowTitle(tr("自动添加记录"));
+				dlg.setWindowTitle(tr("Auto add"));
 				dlg.setRecord(record);
 				if(dlg.exec() == QDialog::Accepted)
 					addRecord(dlg.getRecord());
@@ -145,7 +146,7 @@ void DailyPage::slotCheckAuto()
 
 	// set lastDate to dueday
 	for(int i=0; i<ids.size(); ++i)
-		query.exec(tr("UPDATE %1 SET lastDate = \'%2\' WHERE id = %3")
+		query.exec(tr("UPDATE %1 SET lastDate = \"%2\" WHERE id = %3")
 					.arg(autoTable)
 					.arg(dueDays[i].toString(Qt::ISODate))
 					.arg(ids[i]));
@@ -164,7 +165,7 @@ void DailyPage::showEvent(QShowEvent*)
 void DailyPage::slotAdd()
 {
 	DailyDialog dlg(outcome, this);
-	dlg.setWindowTitle(tr("添加记录"));
+	dlg.setWindowTitle(tr("Auto add"));
 	if(dlg.exec() == QDialog::Accepted)
 		addRecord(dlg.getRecord());
 }
@@ -172,7 +173,7 @@ void DailyPage::slotAdd()
 void DailyPage::slotEdit()
 {
 	DailyDialog dlg(outcome, this);
-	dlg.setWindowTitle(tr("编辑记录"));
+	dlg.setWindowTitle(tr("Edit record"));
 	dlg.setRecord(exportRecord(currentRow));
 	if(dlg.exec() == QDialog::Accepted)
 		importRecord(currentRow, dlg.getRecord());
@@ -180,7 +181,7 @@ void DailyPage::slotEdit()
 
 void DailyPage::slotDelete()
 {
-	if(QMessageBox::warning(this, tr("确认"), tr("真的要删除该记录么？"), 
+	if(QMessageBox::warning(this, tr("Confirm"), tr("Really delete?"), 
 							QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes)
 	{
 		model->removeRow(currentRow);
@@ -213,22 +214,22 @@ void DailyPage::slotSearch()
 {
 	QString filter;
 	QStringList filters;
-	filters << tr("(Date between \'%1\' and \'%2\')")
+	filters << tr("(Date between \"%1\" and \"%2\")")
 								.arg(ui.dateEditStart->date().toString(Qt::ISODate))
 								.arg(ui.dateEditEnd  ->date().toString(Qt::ISODate));
 	filters << tr("(Amount between %1 and %2)").arg(ui.dblSpinBoxStart->value())
 											   .arg(ui.dblSpinBoxEnd  ->value());
 
-	if(ui.comboCategory->currentText() != tr("所有分类"))
+	if(ui.comboCategory->currentText() != tr("All categories"))
 		filters << tr("(Category = %1)").arg(ui.comboCategory->getCategory());
 
 	QString userFilter = ui.comboUser->currentText();
-	if(userFilter != tr("所有用户"))
-		filters << tr("(UserName = \'%1\')").arg(userFilter);
+	if(userFilter != tr("All users"))
+		filters << tr("(UserName = \"%1\")").arg(userFilter);
 
 	QString descriptionFilter = ui.lineEditNote->text();
 	if(!descriptionFilter.isEmpty())
-		filters << tr("(Description like \'%%1%\')").arg(descriptionFilter);
+		filters << tr("(Description like \"%%1%\")").arg(descriptionFilter);
 
 	filter = filters.join(" AND ");
 	model->setFilter(filters.join(" AND "));
@@ -279,7 +280,7 @@ void DailyPage::importRecord(int row, const DailyRecord& record)
 void DailyPage::updateUser()
 {
 	ui.comboUser->clear();
-	ui.comboUser->addItem(tr("所有用户"));
+	ui.comboUser->addItem(tr("All users"));
 	QSqlQuery query;
 	query.exec(tr("select * from Users"));
 	while(query.next())
@@ -290,6 +291,6 @@ void DailyPage::updateCategory()
 {
 	ui.comboCategory->clear();
 	ui.comboCategory->setTable(categoryTableName);
-	ui.comboCategory->insertItem(0, tr("所有分类"));
+	ui.comboCategory->insertItem(0, tr("All categories"));
 	ui.comboCategory->setCurrentIndex(0);
 }

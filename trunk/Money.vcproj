@@ -266,10 +266,6 @@
 				>
 			</File>
 			<File
-				RelativePath="..\MyComboBox\GetPinYin.cpp"
-				>
-			</File>
-			<File
 				RelativePath="GridWidget.cpp"
 				>
 			</File>
@@ -760,10 +756,6 @@
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\MyComboBox\GetPinYin.cpp"
-				>
-			</File>
-			<File
 				RelativePath="GridWidget.h"
 				>
 				<FileConfiguration
@@ -1208,6 +1200,28 @@
 			<File
 				RelativePath="..\MyComboBox\SetTextComboBox.h"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="SettingDlg.h"

@@ -1,7 +1,8 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>DetailWindowClass</class>
- <widget class="QWidget" name="DetailWindowClass" >
-  <property name="geometry" >
+ <widget class="QWidget" name="DetailWindowClass">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -9,32 +10,32 @@
     <height>542</height>
    </rect>
   </property>
-  <property name="acceptDrops" >
+  <property name="acceptDrops">
    <bool>true</bool>
   </property>
-  <property name="windowTitle" >
-   <string>详细信息</string>
+  <property name="windowTitle">
+   <string>Details</string>
   </property>
-  <layout class="QVBoxLayout" >
-   <property name="margin" >
-    <number>9</number>
-   </property>
-   <property name="spacing" >
+  <layout class="QVBoxLayout">
+   <property name="spacing">
     <number>6</number>
    </property>
+   <property name="margin">
+    <number>9</number>
+   </property>
    <item>
-    <widget class="MyTableView" name="tableView" >
-     <property name="selectionBehavior" >
+    <widget class="MyTableView" name="tableView">
+     <property name="selectionBehavior">
       <enum>QAbstractItemView::SelectRows</enum>
      </property>
-     <property name="sortingEnabled" >
+     <property name="sortingEnabled">
       <bool>true</bool>
      </property>
     </widget>
    </item>
   </layout>
  </widget>
- <layoutdefault spacing="6" margin="11" />
+ <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
   <customwidget>
    <class>MyTableView</class>

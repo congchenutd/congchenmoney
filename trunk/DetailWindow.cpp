@@ -39,11 +39,11 @@ void DetailWindow::initView()
 
 void DetailWindow::initModel()
 {
-	model.setHeaderData(Date,        Qt::Horizontal, tr("日期"));
-	model.setHeaderData(Amount,      Qt::Horizontal, tr("金额"));
-	model.setHeaderData(Category,    Qt::Horizontal, tr("类别"));
-	model.setHeaderData(User,        Qt::Horizontal, tr("用户"));
-	model.setHeaderData(Description, Qt::Horizontal, tr("备注"));
+	model.setHeaderData(Date,        Qt::Horizontal, tr("Date"));
+	model.setHeaderData(Amount,      Qt::Horizontal, tr("Amount"));
+	model.setHeaderData(Category,    Qt::Horizontal, tr("Category"));
+	model.setHeaderData(User,        Qt::Horizontal, tr("User"));
+	model.setHeaderData(Description, Qt::Horizontal, tr("Note"));
 }
 
 void DetailWindow::initConnections()
@@ -69,10 +69,10 @@ void DetailWindow::executeQuery()
 {
 	QString queryString = tr("\
 		select * from (                             \
-			select date, amount, name, userName, description  \
+			select date Date, amount Amount, name Category, userName User, description Note \
 			from %1, %2                             \
-			where category = %3.id and              \
-			date between \'%4\' and \'%5\')         \
+			where %1.category = %3.id and              \
+			date between \"%4\" and \"%5\")         \
 		").arg(tableName)
 		  .arg(categoryTableName)
 		  .arg(categoryTableName)
@@ -85,7 +85,7 @@ void DetailWindow::executeQuery()
 void DetailWindow::slotSort(int column)
 {
 	order = (order == Qt::AscendingOrder) ? Qt::DescendingOrder : Qt::AscendingOrder;
-	QString fields[] = {"date", "amount", "name", "userName", "description"};
+	QString fields[] = {"Date", "Amount", "Category", "User", "Note"};
 	orderBy = fields[column];
 	executeQuery();
 }

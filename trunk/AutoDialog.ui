@@ -6,9 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>322</width>
+    <width>337</width>
     <height>210</height>
    </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Auto add</string>
   </property>
   <property name="windowIcon">
    <iconset resource="Money.qrc">
@@ -18,7 +21,7 @@
    <item row="0" column="0">
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>开始</string>
+      <string>Start</string>
      </property>
     </widget>
    </item>
@@ -83,7 +86,7 @@
    <item row="1" column="0">
     <widget class="QLabel" name="label_4">
      <property name="text">
-      <string>周期</string>
+      <string>Inverval</string>
      </property>
     </widget>
    </item>
@@ -102,27 +105,27 @@
        </property>
        <item>
         <property name="text">
-         <string>每天</string>
+         <string>Every day</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>每周</string>
+         <string>Every week</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>每月</string>
+         <string>Every month</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>每年</string>
+         <string>Every year</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>自定义</string>
+         <string>Customize</string>
         </property>
        </item>
       </widget>
@@ -130,7 +133,7 @@
      <item>
       <widget class="QSpinBox" name="spinBoxMonths">
        <property name="suffix">
-        <string> 个月</string>
+        <string> month(s)</string>
        </property>
        <property name="minimum">
         <number>1</number>
@@ -142,14 +145,14 @@
    <item row="2" column="0">
     <widget class="QLabel" name="label_2">
      <property name="text">
-      <string>金额</string>
+      <string>Amount</string>
      </property>
     </widget>
    </item>
    <item row="3" column="0">
     <widget class="QLabel" name="label_3">
      <property name="text">
-      <string>类别</string>
+      <string>Category</string>
      </property>
     </widget>
    </item>
@@ -166,7 +169,7 @@
    <item row="4" column="0">
     <widget class="QLabel" name="label_5">
      <property name="text">
-      <string>用户</string>
+      <string>User</string>
      </property>
     </widget>
    </item>
@@ -183,7 +186,7 @@
    <item row="5" column="0" colspan="2">
     <widget class="QCheckBox" name="checkBox">
      <property name="text">
-      <string>免提示</string>
+      <string>Auto add</string>
      </property>
     </widget>
    </item>

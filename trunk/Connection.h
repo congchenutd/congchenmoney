@@ -110,9 +110,9 @@ inline void createTables()
 
 	query.exec("create table HiddenSections(tableName varchar, section int)");
 	query.exec("create table Users(userName varchar primary key)");
-	query.exec(QObject::tr("insert into Users values(\'公共\')"));
-	query.exec(QObject::tr("insert into OutcomeCategory values(1, \'未分类\', 4294901760, 1)"));
-	query.exec(QObject::tr("insert into IncomeCategory  values(1, \'未分类\', 4294901760, 1)"));
+	query.exec(QObject::tr("insert into Users values(\"Joint\")"));
+	query.exec(QObject::tr("insert into OutcomeCategory values(1, \"NoCategory\", 4294901760, 1, \"Joint\")"));
+	query.exec(QObject::tr("insert into IncomeCategory  values(1, \"NoCategory\", 4294901760, 1, \"Joint\")"));
 }
 
 #endif

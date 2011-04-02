@@ -27,7 +27,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="Money.qrc">
-    <normaloff>:/Images/webdev_money.png</normaloff>:/Images/webdev_money.png</iconset>
+    <normaloff>:/Images/Money.png</normaloff>:/Images/Money.png</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -48,17 +48,9 @@
        </property>
        <property name="maximumSize">
         <size>
-         <width>100</width>
+         <width>150</width>
          <height>16777215</height>
         </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>华文黑体</family>
-         <pointsize>12</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
        </property>
        <property name="verticalScrollBarPolicy">
         <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -77,7 +69,7 @@
        </property>
        <property name="gridSize">
         <size>
-         <width>100</width>
+         <width>150</width>
          <height>100</height>
         </size>
        </property>
@@ -86,7 +78,7 @@
        </property>
        <item>
         <property name="text">
-         <string>支出记账</string>
+         <string>Outcome</string>
         </property>
         <property name="icon">
          <iconset resource="Money.qrc">
@@ -95,7 +87,7 @@
        </item>
        <item>
         <property name="text">
-         <string>支出统计</string>
+         <string>Out Statistics</string>
         </property>
         <property name="icon">
          <iconset resource="Money.qrc">
@@ -104,7 +96,7 @@
        </item>
        <item>
         <property name="text">
-         <string>收入记账</string>
+         <string>Income</string>
         </property>
         <property name="icon">
          <iconset resource="Money.qrc">
@@ -113,7 +105,7 @@
        </item>
        <item>
         <property name="text">
-         <string>收入统计</string>
+         <string>In Statistics</string>
         </property>
         <property name="icon">
          <iconset resource="Money.qrc">
@@ -122,7 +114,7 @@
        </item>
        <item>
         <property name="text">
-         <string>收支对比</string>
+         <string>I/O compare</string>
         </property>
         <property name="icon">
          <iconset resource="Money.qrc">
@@ -156,15 +148,14 @@
    </property>
    <widget class="QMenu" name="menu_About">
     <property name="title">
-     <string>关于</string>
+     <string>&amp;About</string>
     </property>
     <addaction name="actionAbout"/>
    </widget>
    <widget class="QMenu" name="menu_File">
     <property name="title">
-     <string>&amp;文件</string>
+     <string>&amp;File</string>
     </property>
-    <addaction name="actionDeposits"/>
     <addaction name="actionBackup"/>
     <addaction name="actionSetting"/>
     <addaction name="separator"/>
@@ -179,7 +170,7 @@
      <normaloff>:/Images/exit.png</normaloff>:/Images/exit.png</iconset>
    </property>
    <property name="text">
-    <string>退出</string>
+    <string>&amp;Quit</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Q</string>
@@ -191,7 +182,7 @@
      <normaloff>:/Images/help.png</normaloff>:/Images/help.png</iconset>
    </property>
    <property name="text">
-    <string>关于</string>
+    <string>&amp;About</string>
    </property>
   </action>
   <action name="actionSetting">
@@ -200,7 +191,7 @@
      <normaloff>:/Images/Options.png</normaloff>:/Images/Options.png</iconset>
    </property>
    <property name="text">
-    <string>设置</string>
+    <string>&amp;Setting</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+O</string>
@@ -212,7 +203,7 @@
      <normaloff>:/Images/Floppy.png</normaloff>:/Images/Floppy.png</iconset>
    </property>
    <property name="text">
-    <string>备份数据库</string>
+    <string>&amp;Backup database</string>
    </property>
   </action>
   <action name="actionDeposits">

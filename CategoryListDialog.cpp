@@ -23,8 +23,8 @@ void CategoryListDialog::initModel()
 	model = new CategoryModel(this);
 	model->setTable(categoryTableName);
 	model->select();
-	model->setHeaderData(Name, Qt::Horizontal, tr("类别名称"));
-	model->setHeaderData(User, Qt::Horizontal, tr("缺省用户"));
+	model->setHeaderData(Name, Qt::Horizontal, tr("Category name"));
+	model->setHeaderData(User, Qt::Horizontal, tr("Default user"));
 }
 
 void CategoryListDialog::initView()
@@ -106,12 +106,12 @@ void CategoryListDialog::changeParentTypeName(const QString& parentName, const Q
 	{
 		const QString newFullName = tr("%1 - %2").arg(newName)
 												 .arg(CategoryModel::getSubtypeName(oldFullName));
-		query.exec(tr("UPDATE %1 SET name = \'%2\' WHERE name = \'%3\'").arg(categoryTableName)
+		query.exec(tr("UPDATE %1 SET name = \"%2\" WHERE name = \"%3\"").arg(categoryTableName)
 																		.arg(newFullName)
 																		.arg(oldFullName));
 	}
 	// parent type
-	query.exec(tr("UPDATE %1 SET name = \'%2\' WHERE name = \'%3\'").arg(categoryTableName)
+	query.exec(tr("UPDATE %1 SET name = \"%2\" WHERE name = \"%3\"").arg(categoryTableName)
 																	.arg(newName)			
 																	.arg(parentName));
 	model->select();
@@ -123,7 +123,7 @@ void CategoryListDialog::changeParentTypeColor(const QString& parentName, const 
 	QStringList tobeChanged = CategoryModel::getSubtypes(categoryTableName, parentName);
 	tobeChanged << parentName;
 	foreach(QString subtype, tobeChanged)
-		query.exec(tr("UPDATE %1 SET color = \'%2\' WHERE name = \'%3\'").arg(categoryTableName)
+		query.exec(tr("UPDATE %1 SET color = \"%2\" WHERE name = \"%3\"").arg(categoryTableName)
 																		 .arg(newColor.rgb())
 																		 .arg(subtype));
 	model->select();
@@ -146,8 +146,9 @@ void CategoryListDialog::deleteParentType(const QString& parentName)
 
 void CategoryListDialog::slotDelete()
 {
-	if(QMessageBox::warning(this, tr("警告"), 
-							tr("删除类别会删除其下所有子类，并将所含记录归为未分类"),
+	if(QMessageBox::warning(this, tr("Confirm"), 
+							tr("This action will delete the category along with its subcategories, \
+							    all records in this category will put to NoCategory"),
 							QMessageBox::Yes, QMessageBox::No) == QMessageBox::Yes)
 		deleteParentType(model->data(model->index(currentRow, 1)).toString());
 }

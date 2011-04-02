@@ -25,7 +25,6 @@ SettingDlg::SettingDlg(QWidget *parent)
 	connect(ui.buttonCalc,          SIGNAL(clicked()), this, SLOT(slotSetCalc()));
 	connect(ui.buttonAddUser,       SIGNAL(clicked()), this, SLOT(slotAddUser()));
 	connect(ui.buttonDelUser,       SIGNAL(clicked()), this, SLOT(slotDelUser()));
-	connect(ui.buttonPassword,      SIGNAL(clicked()), this, SLOT(slotPassword()));
 	connect(ui.checkBoxAutoBackup, SIGNAL(toggled(bool)), ui.spinBoxBackupDays, SLOT(setEnabled(bool)));
 }
 
@@ -36,24 +35,24 @@ void SettingDlg::slotGuiFont() {
 void SettingDlg::slotSetDBFileName()
 {
 	QString fileName = QFileDialog::getOpenFileName(
-		this, tr("设置数据库文件"),	"money.db",	"Database (*.db);;All Files (*.*)");
+		this, tr("Database file"), "money.db", "Database (*.db);;All Files (*.*)");
 	if(!fileName.isEmpty())
 	{
 		setDBFileName(QFileInfo(fileName).filePath());
-		QMessageBox::information(this, tr("注意"), tr("本设置将在下次启动生效"));
+		QMessageBox::information(this, tr("Warning"), tr("Activate next time"));
 	}
 }
 
 void SettingDlg::slotAddUser()
 {
 	bool ok;
-	QString name = QInputDialog::getText(this, tr("添加用户"), 
-		tr("输入用户名"), QLineEdit::Normal, tr("新建用户"), &ok);
+	QString name = QInputDialog::getText(this, tr("Add user"), 
+		tr("User name"), QLineEdit::Normal, tr("New user"), &ok);
 	if (ok && !name.isEmpty())
 	{
 		if(ui.comboBoxUser->findText(name) != -1)
 		{
-			QMessageBox::warning(this, tr("错误"), tr("该用户名已经存在"));
+			QMessageBox::warning(this, tr("Error"), tr("User exists"));
 			return;
 		}
 		ui.comboBoxUser->addItem(name);
@@ -63,7 +62,7 @@ void SettingDlg::slotAddUser()
 
 void SettingDlg::slotDelUser()
 {
-	if(QMessageBox::warning(this, tr("确定删除"), tr("真的要删除该用户么？"), 
+	if(QMessageBox::warning(this, tr("Confirm"), tr("Really delete?"), 
 						QMessageBox::Yes, QMessageBox::No) == QMessageBox::Yes)
 	{
 		ui.comboBoxUser->removeItem(ui.comboBoxUser->currentIndex());
@@ -73,21 +72,21 @@ void SettingDlg::slotDelUser()
 
 void SettingDlg::exportSettings() const
 {
-	UserSetting* setting = MySetting<UserSetting>::getInstance("Global");
+	UserSetting* setting = MySetting<UserSetting>::getInstance();
 	setting->setValue("DBFileName", getDBFileName());
 	setting->setValue("Calculator", getCalculator());
-        setting->setValue("GuiFont",    getGuiFont().toString());
+	setting->setValue("GuiFont",    getGuiFont().toString());
 	setting->setValue("AutoBackup", getAutoBackup());
 	setting->setValue("BackupDays", getBackupDays());
-        setting->setValue("TaxRate",    getTaxRate());
+	setting->setValue("TaxRate",    getTaxRate());
 }
 
 void SettingDlg::importSettings()
 {
-	UserSetting* setting = MySetting<UserSetting>::getInstance("Global");
+	UserSetting* setting = MySetting<UserSetting>::getInstance();
 	setDBFileName(setting->value("DBFileName").toString());
 	setCalculator(setting->value("Calculator").toString());
-        setGuiFont   (setting->getFont("GuiFont"));
+    setGuiFont   (setting->getFont("GuiFont"));
 	setAutoBackup(setting->value("AutoBackup").toBool());
 	setBackupDays(setting->value("BackupDays").toInt());
 	setTaxRate(setting->value("TaxRate").toDouble());
@@ -99,16 +98,10 @@ void SettingDlg::setAutoBackup(bool aut)
 	ui.spinBoxBackupDays->setEnabled(aut);
 }
 
-void SettingDlg::slotPassword()
-{
-	PasswordDlg dlg(this);
-	dlg.exec();
-}
-
 void SettingDlg::slotSetCalc()
 {
 	QString fileName = QFileDialog::getOpenFileName(
-		this, tr("设置计算器路径"));
+		this, tr("Set calculator path"));
 	if(!fileName.isEmpty())
 		setCalculator(QFileInfo(fileName).filePath());
 }

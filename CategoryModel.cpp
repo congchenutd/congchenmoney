@@ -10,7 +10,7 @@ CategoryModel::CategoryModel(QObject *parent)
 void CategoryModel::setTable(const QString& tableName)
 {
 	QSqlTableModel::setTable(tableName);
-	setFilter(tr("name != \'未分类\'"));
+	setFilter(tr("name != \"NoCategory\""));
 }
 
 QVariant CategoryModel::data(const QModelIndex& idx, int role) const
@@ -77,20 +77,20 @@ QString CategoryModel::getCategoryName(const QString& table, int id)
 {
 	QSqlQuery query;
 	query.exec(tr("SELECT name FROM %1 WHERE id = %2").arg(table).arg(id));
-	return query.next() ? query.value(0).toString() : tr("未分类");
+	return query.next() ? query.value(0).toString() : tr("NoCategory");
 }
 
 int CategoryModel::getCategoryID(const QString& table, const QString& categoryName)
 {
 	QSqlQuery query;
-	query.exec(tr("SELECT id FROM %1 WHERE name=\'%2\'").arg(table).arg(categoryName));
+	query.exec(tr("SELECT id FROM %1 WHERE name=\"%2\"").arg(table).arg(categoryName));
 	return query.next() ? query.value(0).toInt() : 1;
 }
 
 QStringList CategoryModel::getSubtypes(const QString& table, const QString& categoryName)
 {
 	QStringList result;
-	if(categoryName == tr("未分类"))
+	if(categoryName == tr("NoCategory"))
 		return result;
 
 	QSqlQuery query;

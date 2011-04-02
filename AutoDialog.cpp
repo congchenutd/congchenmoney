@@ -29,7 +29,7 @@ void AutoDialog::initView()
 	ui.comboBoxCategory->setTable(categoryTableName);
 
 	ui.dateEdit->setDate(QDate::currentDate());
-	setInterval(tr("每月"));
+	setInterval(tr("Every Month"));
 	ui.doubleSpinBox->setFocus();
 	ui.spinBoxMonths->hide();
 }
@@ -39,7 +39,7 @@ QString AutoDialog::getInterval() const
 	int index = ui.comboBoxInterval->currentIndex();
 	if(index < 4)
 		return ui.comboBoxInterval->currentText();
-	return tr("%1个月").arg(ui.spinBoxMonths->value());
+	return tr("%1 Month(s)").arg(ui.spinBoxMonths->value());
 }
 
 double AutoDialog::getAmount() const {
@@ -98,7 +98,7 @@ void AutoDialog::accept()
 {
 	if (getAmount() <= 0)
 	{
-		QMessageBox::critical(this, tr("错误"), tr("金额不能为0"));
+		QMessageBox::critical(this, tr("Error"), tr("Amount can not be zero"));
 		return;
 	}
 	QDialog::accept();

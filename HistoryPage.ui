@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1056</width>
+    <width>1151</width>
     <height>547</height>
    </rect>
   </property>
@@ -22,7 +22,7 @@
      <item>
       <widget class="QCheckBox" name="checkBoxByUser">
        <property name="text">
-        <string>按用户</string>
+        <string>By user</string>
        </property>
       </widget>
      </item>
@@ -39,7 +39,7 @@
      <item>
       <widget class="QCheckBox" name="checkBoxByCategory">
        <property name="text">
-        <string>分类历史</string>
+        <string>By category</string>
        </property>
       </widget>
      </item>
@@ -56,7 +56,7 @@
      <item>
       <widget class="QLabel" name="label_5">
        <property name="text">
-        <string>   日期介于</string>
+        <string>   Date between</string>
        </property>
        <property name="buddy">
         <cstring>comboBoxCategory</cstring>
@@ -88,7 +88,7 @@
      <item>
       <widget class="QLabel" name="label_6">
        <property name="text">
-        <string>和</string>
+        <string>and</string>
        </property>
        <property name="buddy">
         <cstring>comboBoxCategory</cstring>
@@ -122,6 +122,18 @@
        <property name="enabled">
         <bool>false</bool>
        </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>16777215</height>
+        </size>
+       </property>
        <property name="toolTip">
         <string>上一月</string>
        </property>
@@ -149,6 +161,12 @@
        <property name="enabled">
         <bool>false</bool>
        </property>
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>16777215</height>
+        </size>
+       </property>
        <property name="toolTip">
         <string>下一月</string>
        </property>
@@ -159,6 +177,12 @@
      </item>
      <item>
       <widget class="QPushButton" name="buttonPrevYear">
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>16777215</height>
+        </size>
+       </property>
        <property name="toolTip">
         <string>上一年</string>
        </property>
@@ -186,6 +210,12 @@
      </item>
      <item>
       <widget class="QPushButton" name="buttonNextYear">
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>16777215</height>
+        </size>
+       </property>
        <property name="toolTip">
         <string>下一年</string>
        </property>
@@ -207,13 +237,7 @@
      <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>
-     <widget class="GridWidget" name="gridWidget">
-      <property name="font">
-       <font>
-        <pointsize>13</pointsize>
-       </font>
-      </property>
-     </widget>
+     <widget class="GridWidget" name="gridWidget"/>
      <widget class="QSplitter" name="splitterVertical">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>

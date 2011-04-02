@@ -20,15 +20,15 @@ ComparePage::~ComparePage()
 void ComparePage::initModel()
 {
 	model = new QStandardItemModel(0, 4);
-	model->setHeaderData(0, Qt::Horizontal, tr("月份"));
-	model->setHeaderData(1, Qt::Horizontal, tr("收入"));
-	model->setHeaderData(2, Qt::Horizontal, tr("支出"));
-	model->setHeaderData(3, Qt::Horizontal, tr("余额"));
+	model->setHeaderData(0, Qt::Horizontal, tr("Month"));
+	model->setHeaderData(1, Qt::Horizontal, tr("Income"));
+	model->setHeaderData(2, Qt::Horizontal, tr("Outcome"));
+	model->setHeaderData(3, Qt::Horizontal, tr("Balance"));
 
 	barviewModel = new QStandardItemModel(3, 2);
-	barviewModel->setData(barviewModel->index(0, 0), tr("收入"));
-	barviewModel->setData(barviewModel->index(1, 0), tr("支出"));
-	barviewModel->setData(barviewModel->index(2, 0), tr("余额"));
+	barviewModel->setData(barviewModel->index(0, 0), tr("Income"));
+	barviewModel->setData(barviewModel->index(1, 0), tr("Outcome"));
+	barviewModel->setData(barviewModel->index(2, 0), tr("Balance"));
 }
 
 void ComparePage::initView()
@@ -105,12 +105,12 @@ void ComparePage::updateData()
 		model->setData(model->index(lastRow, 0), firstDayInMonth.toString("yyyy-MM"));
 
 		QSqlQuery query;
-		query.exec(tr("select sum(amount) from Income where date between \'%1\' and \'%2\'")
+		query.exec(tr("select sum(amount) from Income where date between \"%1\" and \"%2\"")
 													.arg(firstDayInMonth.toString(Qt::ISODate))
 													.arg(lastDayInMonth. toString(Qt::ISODate)));
 		double income = query.next() ? query.value(0).toDouble() : 0.0;
 
-		query.exec(tr("select sum(amount) from Outcome where date between \'%1\' and \'%2\'")
+		query.exec(tr("select sum(amount) from Outcome where date between \"%1\" and \"%2\"")
 													.arg(firstDayInMonth.toString(Qt::ISODate))
 													.arg(lastDayInMonth. toString(Qt::ISODate)));
 		double outcome = query.next() ? query.value(0).toDouble() : 0.0;
@@ -125,7 +125,7 @@ void ComparePage::updateSum()
 {
 	int lastRow = model->rowCount();
 	model->insertRow(lastRow);
-	model->setData(model->index(lastRow, 0), tr("总和"));
+	model->setData(model->index(lastRow, 0), tr("Sum"));
 	for(int j=1; j<model->columnCount(); ++j)
 	{
 		double sum = 0.0;

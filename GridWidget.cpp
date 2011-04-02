@@ -48,7 +48,7 @@ void GridWidget::refreshCategories()
 {
 	model->clear();
 	model->insertColumn(0);
-	model->setHeaderData(0, Qt::Horizontal, tr("月份"));
+	model->setHeaderData(0, Qt::Horizontal, tr("Month"));
 
 	QSqlQuery query;
 	query.exec(tr("select name from %1").arg(categoryTableName));
@@ -65,7 +65,7 @@ void GridWidget::refreshCategories()
 
 	int lastCol = model->columnCount();
 	model->insertColumn(lastCol);
-	model->setHeaderData(lastCol, Qt::Horizontal, tr("当月总和"));
+	model->setHeaderData(lastCol, Qt::Horizontal, tr("Sum of month"));
 }
 
 void GridWidget::refreshData()
@@ -135,7 +135,7 @@ void GridWidget::getData()
 		QDate lastDayInMonth (it->first, it->second, firstDayInMonth.daysInMonth());
 
 		QString monthClause = tr("select * from %1 \
-								  where date between \'%2\' and \'%3\' %4")
+								  where date between \"%2\" and \"%3\" %4")
 									.arg(tableName)
 									.arg(firstDayInMonth.toString(Qt::ISODate))
 									.arg(lastDayInMonth. toString(Qt::ISODate))
@@ -180,7 +180,7 @@ void GridWidget::getSumForCategory()
 {
 	int lastRow = model->rowCount();
 	model->insertRow(lastRow);
-	model->setData(model->index(lastRow, 0), tr("分类总和"));
+	model->setData(model->index(lastRow, 0), tr("Sum of category"));
 	for(int j=1; j<model->columnCount(); ++j)
 	{
 		double sum = 0.0;
@@ -199,13 +199,13 @@ void GridWidget::contextMenuEvent(QContextMenuEvent* event)
 
 QString GridWidget::getMonthFilter(const QString& monthRule)
 {
-	QString firstMonth = "\'" + monthRule + "-01\'";
-	QString lastMonth  = "\'" + monthRule + "-31\'";
+	QString firstMonth = "\"" + monthRule + "-01\"";
+	QString lastMonth  = "\"" + monthRule + "-31\"";
 	return QString("date between %1 and %2").arg(firstMonth).arg(lastMonth);
 }
 
 QString GridWidget::getCategoryFilter(const QString& categoryRule) {
-	return tr("NAME LIKE \'%1%%\'").arg(categoryRule);
+	return tr("Category LIKE \"%1%%\"").arg(categoryRule);
 }
 
 QString GridWidget::getOneFilter(const QString& monthRule, const QString& categoryRule)
@@ -296,7 +296,7 @@ QString GridWidget::getMonthCategoryFilters(const Rules& rules)
 	}
 	else
 		return userName.isEmpty() ? QString() 
-								  : tr("where userName = \'%1\'").arg(userName);
+								  : tr("where userName = \"%1\"").arg(userName);
 }
 
 void GridWidget::slotShowDetail()
@@ -313,5 +313,5 @@ void GridWidget::setUser(const QString& user)
 }
 
 QString GridWidget::getUserClause() const {
-	return userName.isEmpty() ? QString() : tr(" and userName = \'%1\'").arg(userName);
+	return userName.isEmpty() ? QString() : tr(" and userName = \"%1\"").arg(userName);
 }

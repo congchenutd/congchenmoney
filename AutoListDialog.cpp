@@ -19,13 +19,13 @@ void AutoListDialog::initModel()
 	model->setTable(autoTableName);
 	model->setRelation(Category, QSqlRelation(categoryTableName, "id", "name"));
 	model->select();
-	model->setHeaderData(Date,     Qt::Horizontal, tr("开始"));
-	model->setHeaderData(Interval, Qt::Horizontal, tr("周期"));
-	model->setHeaderData(Amount,   Qt::Horizontal, tr("金额"));
-	model->setHeaderData(Category, Qt::Horizontal, tr("类别"));
-	model->setHeaderData(User,     Qt::Horizontal, tr("用户"));
-	model->setHeaderData(Auto,     Qt::Horizontal, tr("免提示"));
-	model->setHeaderData(LastDate, Qt::Horizontal, tr("上次提示时间"));
+	model->setHeaderData(Date,     Qt::Horizontal, tr("Start"));
+	model->setHeaderData(Interval, Qt::Horizontal, tr("Interval"));
+	model->setHeaderData(Amount,   Qt::Horizontal, tr("Amount"));
+	model->setHeaderData(Category, Qt::Horizontal, tr("Category"));
+	model->setHeaderData(User,     Qt::Horizontal, tr("User"));
+	model->setHeaderData(Auto,     Qt::Horizontal, tr("Auto add"));
+	model->setHeaderData(LastDate, Qt::Horizontal, tr("Last time"));
 }
 
 void AutoListDialog::initView()
@@ -51,7 +51,7 @@ void AutoListDialog::initConnections()
 void AutoListDialog::slotAdd()
 {
 	AutoDialog dlg(outcome, this);
-	dlg.setWindowTitle(tr("添加记录"));
+	dlg.setWindowTitle(tr("Add record"));
 	if(dlg.exec() == QDialog::Accepted)
 	{
 		int lastRow = model->rowCount();
@@ -64,7 +64,7 @@ void AutoListDialog::slotAdd()
 void AutoListDialog::slotEdit()
 {
 	AutoDialog dlg(outcome, this);
-	dlg.setWindowTitle(tr("编辑记录"));
+	dlg.setWindowTitle(tr("Edit record"));
 	dlg.setRecord(exportRecord(currentRow));
 	if(dlg.exec() == QDialog::Accepted)
 		importRecord(currentRow, dlg.getRecord());
@@ -72,7 +72,7 @@ void AutoListDialog::slotEdit()
 
 void AutoListDialog::slotDel()
 {
-	if(QMessageBox::warning(this, tr("确认"), tr("真的要删除该记录么？"), 
+	if(QMessageBox::warning(this, tr("Confirm"), tr("Really delete?"), 
 							QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes)
 	{
 		model->removeRow(currentRow);

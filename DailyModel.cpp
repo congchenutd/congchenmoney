@@ -16,7 +16,7 @@ QVariant DailyModel::data(const QModelIndex& idx, int role) const
 QColor DailyModel::getColor(const QString& cate) const
 {
 	QSqlQuery query;
-	query.exec(tr("SELECT color FROM %1 WHERE name = \'%2\'")
+	query.exec(tr("SELECT color FROM %1 WHERE name = \"%2\"")
 						.arg(tableName() + "Category")
 						.arg(cate));
 	return query.next() ? query.value(0).toInt() : Qt::white;

@@ -9,7 +9,7 @@
 class UserSetting : public MySetting<UserSetting>
 {
 public:
-        UserSetting(const QString& userName) : MySetting<UserSetting>(userName) {
+	UserSetting(const QString& userName) : MySetting<UserSetting>(userName) {
 		if(QFile(userName + ".ini").size() == 0)   // no setting
 			loadDefaults();
 	}
@@ -35,11 +35,10 @@ protected:
 	virtual void loadDefaults()
 	{
 		setValue("DBFileName", "Money.db");
-                setValue("GuiFont",    QFont(tr("ËÎÌו"), 11));
 		setValue("AutoBackup", true);
 		setValue("BackupDays", 7);
-		setPassword("123456");
 		setValue("TaxRate", 8.25);
+		setValue("GuiFont", QFont("Arial", 10));
 	}
 };
 
@@ -73,7 +72,6 @@ private slots:
 	void slotSetDBFileName();
 	void slotAddUser();
 	void slotDelUser();
-	void slotPassword();
 	void slotSetCalc();
 
 private:

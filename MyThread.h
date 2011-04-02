@@ -16,7 +16,7 @@ public:
 
 	virtual void run()
 	{
-		UserSetting* setting = MySetting<UserSetting>::getInstance("Global");
+		UserSetting* setting = MySetting<UserSetting>::getInstance();
 		QString calc = setting->value("Calculator").toString();
 		if(!calc.isEmpty())
 			QProcess::execute(calc);

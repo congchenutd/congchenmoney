@@ -1,7 +1,7 @@
 <RCC>
   <qresource prefix="/">
-    <file>Images/webdev_money.png</file>
     <file>Images/find.png</file>
+    <file>Images/Money.png</file>
     <file>Images/exit.png</file>
     <file>Images/help.png</file>
     <file>Images/ni_png_2_1876.png</file>

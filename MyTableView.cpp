@@ -11,11 +11,11 @@ MyTableView::MyTableView(QWidget* parent) : QTableView(parent)
 void MyTableView::saveHiddenSections()
 {
 	QSqlQuery query;
-	query.exec(tr("DELETE FROM HiddenSections WHERE tableName = \'%1\'").arg(tableName));
+	query.exec(tr("DELETE FROM HiddenSections WHERE tableName = \"%1\"").arg(tableName));
 	for(int i=0; i<model()->columnCount(); ++i)
 		if(isColumnHidden(i))
 			query.exec(tr("INSERT INTO HiddenSections \
-						   VALUES(\'%1\', %2)").arg(tableName).arg(i));
+						   VALUES(\"%1\", %2)").arg(tableName).arg(i));
 }
 
 void MyTableView::setSectionSizeRatio(int section, double ratio) {
@@ -37,7 +37,7 @@ void MyTableView::setModel(QAbstractItemModel* model)
 	{
 		tableName = tableModel->tableName();
 		QSqlQuery query;
-		query.exec(tr("SELECT section FROM HiddenSections WHERE tableName = \'%1\'")
+		query.exec(tr("SELECT section FROM HiddenSections WHERE tableName = \"%1\"")
 						.arg(tableName));
 		while(query.next())
 			hideColumn(query.value(0).toInt());

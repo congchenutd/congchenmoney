@@ -1,7 +1,8 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>ProgressWidgetClass</class>
- <widget class="QWidget" name="ProgressWidgetClass" >
-  <property name="geometry" >
+ <widget class="QWidget" name="ProgressWidgetClass">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -9,50 +10,50 @@
     <height>300</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>ProgressWidget</string>
   </property>
-  <layout class="QVBoxLayout" >
-   <property name="margin" >
+  <layout class="QVBoxLayout">
+   <property name="spacing">
     <number>0</number>
    </property>
-   <property name="spacing" >
+   <property name="margin">
     <number>0</number>
    </property>
    <item>
-    <widget class="QTabWidget" name="tabWidget" >
-     <property name="currentIndex" >
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
       <number>0</number>
      </property>
-     <widget class="QWidget" name="barViewTab" >
-      <attribute name="title" >
-       <string>柱形图</string>
+     <widget class="QWidget" name="barViewTab">
+      <attribute name="title">
+       <string>Bar chart</string>
       </attribute>
-      <layout class="QVBoxLayout" >
-       <property name="margin" >
-        <number>0</number>
-       </property>
-       <property name="spacing" >
+      <layout class="QVBoxLayout">
+       <property name="spacing">
         <number>6</number>
        </property>
+       <property name="margin">
+        <number>0</number>
+       </property>
        <item>
-        <widget class="BarView" name="barView" />
+        <widget class="BarView" name="barView"/>
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="kViewTab" >
-      <attribute name="title" >
-       <string>线形图</string>
+     <widget class="QWidget" name="kViewTab">
+      <attribute name="title">
+       <string>Line chart</string>
       </attribute>
-      <layout class="QVBoxLayout" >
-       <property name="margin" >
+      <layout class="QVBoxLayout">
+       <property name="spacing">
         <number>0</number>
        </property>
-       <property name="spacing" >
+       <property name="margin">
         <number>0</number>
        </property>
        <item>
-        <widget class="KView" name="kView" />
+        <widget class="KView" name="kView"/>
        </item>
       </layout>
      </widget>
@@ -60,7 +61,7 @@
    </item>
   </layout>
  </widget>
- <layoutdefault spacing="6" margin="11" />
+ <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
   <customwidget>
    <class>KView</class>

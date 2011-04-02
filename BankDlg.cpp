@@ -29,11 +29,11 @@ BankDlg::BankDlg(QWidget* parent) : QDialog(parent)
 void BankDlg::slotAdd()
 {
 	bool ok;
-	QString bankName = QInputDialog::getText(this, tr("添加银行"),	tr("银行名称："),
+	QString bankName = QInputDialog::getText(this, tr("Add bank"), tr("Bank name:"),
 											 QLineEdit::Normal,	QString(), &ok);
 	if(ok && !bankName.isEmpty())
 	{
-		int lastRow = model->rowCount();
+		int lastRow = model->rowCount(); 
 		model->insertRow(lastRow);
 		model->setData(model->index(lastRow, 0), bankName);
 	}
@@ -42,7 +42,7 @@ void BankDlg::slotAdd()
 void BankDlg::slotEdit()
 {
 	bool ok;
-	QString bankName = QInputDialog::getText(this, tr("编辑银行"),	tr("银行名称："),
+	QString bankName = QInputDialog::getText(this, tr("Edit bank"), tr("Bank name:"),
 			QLineEdit::Normal,	model->data(model->index(currentRow, 0)).toString(), &ok);
 	if(ok && !bankName.isEmpty())
 		model->setData(model->index(currentRow, 0), bankName);
@@ -50,7 +50,7 @@ void BankDlg::slotEdit()
 
 void BankDlg::slotDel()
 {
-	if(QMessageBox::warning(this, tr("确认"), tr("真的要删除该记录么？"), 
+	if(QMessageBox::warning(this, tr("Confirm"), tr("Really delete?"), 
 		QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes)
 		model->removeRow(currentRow);
 }

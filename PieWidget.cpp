@@ -5,7 +5,7 @@ PieWidget::PieWidget(QWidget *parent)
 {
 	ui.setupUi(this);
 
-	model = new PieModel(this);
+	model = new PieChartModel(this);
 	ui.pieView->setModel(model);
 }
 

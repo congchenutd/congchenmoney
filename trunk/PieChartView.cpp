@@ -5,7 +5,7 @@
 #include <QPainter>
 #include <QPaintEvent>
 #include "PieChartView.h"
-#include "PieModel.h"
+#include "PieChartModel.h"
 
 PieChartView::PieChartView(QWidget *parent)
     : QAbstractItemView(parent) {}
@@ -23,7 +23,7 @@ void PieChartView::dataChanged(const QModelIndex &topLeft, const QModelIndex &bo
 {
 	QAbstractItemView::dataChanged(topLeft, bottomRight);
 	validItems  = getValidItems();
-	totalAmount = static_cast<PieModel*>(model())->getTotalAmount();
+	totalAmount = static_cast<PieChartModel*>(model())->getTotalAmount();
 	viewport()->update();
 }
 

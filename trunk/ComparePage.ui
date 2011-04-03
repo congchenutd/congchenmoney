@@ -171,7 +171,7 @@
        <set>QAbstractItemView::NoEditTriggers</set>
       </property>
      </widget>
-     <widget class="BarView" name="barView" native="true"/>
+     <widget class="BarChartView" name="barView" native="true"/>
     </widget>
    </item>
   </layout>
@@ -179,9 +179,9 @@
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
   <customwidget>
-   <class>BarView</class>
+   <class>BarChartView</class>
    <extends>QWidget</extends>
-   <header>BarView.h</header>
+   <header>BarChartView.h</header>
   </customwidget>
  </customwidgets>
  <resources>

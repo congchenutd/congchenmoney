@@ -37,7 +37,7 @@
         <number>0</number>
        </property>
        <item>
-        <widget class="BarView" name="barView"/>
+        <widget class="BarChartView" name="barView"/>
        </item>
       </layout>
      </widget>
@@ -53,7 +53,7 @@
         <number>0</number>
        </property>
        <item>
-        <widget class="KView" name="kView"/>
+        <widget class="LineChartView" name="kView"/>
        </item>
       </layout>
      </widget>
@@ -64,14 +64,14 @@
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
   <customwidget>
-   <class>KView</class>
+   <class>LineChartView</class>
    <extends>QTableView</extends>
-   <header>KView.h</header>
+   <header>LineChartView.h</header>
   </customwidget>
   <customwidget>
-   <class>BarView</class>
+   <class>BarChartView</class>
    <extends>QTableView</extends>
-   <header>BarView.h</header>
+   <header>BarChartView.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
